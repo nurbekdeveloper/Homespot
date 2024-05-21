@@ -1,12 +1,15 @@
 import React from 'react'
 import Navbar from '../componenets/navbar/Navbar'
-import Header from '../componenets/header/Header'
+
+
+import BuildingTypes from '../componenets/types/BuildTypes'
 
 function Main() {
   return (
     <div>
       <Navbar/>
-      <Header/>
+      {/* <Header/> */}
+      <BuildingTypes/>
     </div>
   )
 }

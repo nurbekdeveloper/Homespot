@@ -1,7 +1,7 @@
 .header {
   position: relative;
-  height: 60vh;
-  background: url('') no-repeat center center/cover;
+  /* height: 60vh;
+  background: url('') no-repeat center center/cover; */
   display: flex;
   justify-content: center;
   align-items: center;
