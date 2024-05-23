@@ -9,6 +9,7 @@ import Footer from '../componenets/footer/Footer'
 import Navbar from '../componenets/navbar/Navbar'
 import Technology from '../componenets/technology/Technology'
 import UsefulLinks from '../componenets/usefulLinks/UsefulLinks'
+import Tree from '../componenets/trees/Tree'
 
 
 
@@ -22,6 +23,7 @@ function Main() {
       <Technology/>
       <BuildingTypes/>
       <UsefulLinks/>
+      <Tree/>
       <Footer/>
 
 
