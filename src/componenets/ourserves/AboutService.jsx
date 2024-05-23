@@ -1,7 +1,7 @@
 // src/ServiceDescription.js
 import React from 'react';
 import styled from 'styled-components';
-import serviceImage from '../../Assets/ourserves.svg'; // Make sure to update the path to your image
+import serviceImage from '../../Assets/ourserves.png'; // Make sure to update the path to your image
 
 const Container = styled.div`
   display: flex;

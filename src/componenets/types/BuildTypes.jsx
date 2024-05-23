@@ -2,11 +2,11 @@
 import React from 'react';
 import BuildingTypeCard from './BuildingTypeCard';
 import './BuildingTypeCard.css';
-import houseImg from '../../Assets/img1.svg';
-import bathImg from '../../Assets/img2.svg';
-import garageImg from '../../Assets/img3.svg';
-import shedImg from '../../Assets/img4.svg';
-import commercialImg from '../../Assets/img5.svg';
+import houseImg from '../../Assets/img1.png';
+import bathImg from '../../Assets/img2.png';
+import garageImg from '../../Assets/img3.png';
+import shedImg from '../../Assets/img4.png';
+import commercialImg from '../../Assets/img5.png';
 
 const buildingTypes = [
     { image: houseImg, count: 358, title: 'Дома' },
@@ -21,13 +21,13 @@ const BuildingTypes = () => {
     <div>
         <h2 className='title'>Типы строений</h2>
             <div className="building-types">
-            
+
             {buildingTypes.map((type, index) => (
-                <BuildingTypeCard 
-                    key={index} 
-                    image={type.image} 
-                    count={type.count} 
-                    title={type.title} 
+                <BuildingTypeCard
+                    key={index}
+                    image={type.image}
+                    count={type.count}
+                    title={type.title}
                 />
             ))}
         </div>

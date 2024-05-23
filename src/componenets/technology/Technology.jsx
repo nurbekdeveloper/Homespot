@@ -1,13 +1,13 @@
 import React from 'react';
 import './Technology.css';
-import img1 from '../../Assets/technology1.svg'
-import img2 from '../../Assets/technology2.svg'
-import img3 from '../../Assets/technology3.svg'
-import img4 from '../../Assets/technology4.svg'
-import img5 from '../../Assets/technology5.svg'
-import img6 from '../../Assets/technology6.svg'
-import img7 from '../../Assets/technology7.svg'
-import img8 from '../../Assets/technology8.svg'
+import img1 from '../../Assets/technology1.png'
+import img2 from '../../Assets/technology2.png'
+import img3 from '../../Assets/technology3.png'
+import img4 from '../../Assets/technology4.png'
+import img5 from '../../Assets/technology5.png'
+import img6 from '../../Assets/technology6.png'
+import img7 from '../../Assets/technology7.png'
+import img8 from '../../Assets/technology8.png'
 const technologies = [
   { name: "Клееный брус", imgSrc:  img1 },
   { name: "Лафет", imgSrc:  img2 },

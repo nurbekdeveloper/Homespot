@@ -1,10 +1,10 @@
 import React from 'react';
 import './UsefulLinks.css';
-import useful1 from '../../Assets/useful1.svg'
-import useful2 from '../../Assets/useful2.svg'
-import useful3 from '../../Assets/useful3.svg'
-import useful4 from '../../Assets/useful5.svg'
-import useful5 from '../../Assets/useful5.svg'
+import useful1 from '../../Assets/useful1.png'
+import useful2 from '../../Assets/useful2.png'
+import useful3 from '../../Assets/useful3.png'
+import useful4 from '../../Assets/useful5.png'
+import useful5 from '../../Assets/useful5.png'
 // src/UsefulLinks.js
 
 
@@ -58,5 +58,3 @@ const UsefulLinks = () => {
 };
 
 export default UsefulLinks;
-
-
