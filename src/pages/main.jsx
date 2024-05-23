@@ -16,24 +16,23 @@ import Frame from '../componenets/frame/Frame'
 import Modal from '../componenets/appliacation/Modal'
 
 import Worker from './worker/Worker'
+import Partner from '../componenets/partneer/Partner'
 
 
 function Main() {
   return (
     <div>
-
+      <Navbar/>
       <Header/>
-      <Worker/>
-      <AboutService/>
-      <ContactForm/>
-      <Technology/>
       <BuildingTypes/>
+      <Technology/>
       <UsefulLinks/>
-      <Modal/>
       <Projects/>
-      <Compare/>
-      <Frame/>
+      <ContactForm/>
+      <AboutService/>
+      <Partner/>
       <Tree/>
+
 
 
 

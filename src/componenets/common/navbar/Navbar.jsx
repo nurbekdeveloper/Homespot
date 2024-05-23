@@ -7,7 +7,7 @@ const Navbar = () => {
   const [navList, setNavList] = useState(false)
 
   return (
-    <>
+
       <header>
         <div className='container flex'>
           <div className='logo'>
@@ -36,7 +36,7 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-    </>
+
   )
 }
 
