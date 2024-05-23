@@ -16,14 +16,14 @@ const ContactForm = () => {
           </label>
           <input id="file-upload" type="file" className="file-input" />
         </div>
-        <button type="submit" className="button">Отправить</button>
+        <button type="submit" className="buttonForm">Отправить</button>
       </form>
-      <div className="description">
+      <div className="description" >
         <h2>Расчёт стоимости по вашему проекту</h2>
-        <p>
+        <p  style={{color:'white'}}>
           Мы считаем большим заблуждением, когда клиенты выбирают архитектурную студию по стоимости проектирования. В частном жилом строительстве есть правило: стоимость проекта составляет 5-10% от стоимости его реализации.
         </p>
-        <p>
+        <p  style={{color:'white'}}>
           Не откладывайте с реализацией своих задумок, обращайтесь прямо сейчас!
         </p>
       </div>

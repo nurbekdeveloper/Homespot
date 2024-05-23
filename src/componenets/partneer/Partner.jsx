@@ -1,72 +1,46 @@
+// src/ServicePartners.js
 import React from 'react';
-import './Partners.css'; // Import the CSS file
-import partnerImage from './path-to-partner-image.png'; // Adjust the path as necessary
+import './Partner.css';
+import partnerImage from '../../Assets/partner.png'; // Ensure the image is in the src folder
 
-const PartnerCard = ({ name, location, image }) => {
-  return (
-    <div className="partner-card">
-      <img src={image} alt={name} className="partner-image" />
-      <div className="partner-info">
-        <h3>{name}</h3>
-        <p>{location}</p>
-      </div>
-    </div>
-  );
-};
+const partners = [
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Архитекторы" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Архитекторы" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Архитекторы" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Дизайнеры" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Дизайнеры" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Дизайнеры" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Заводы" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Заводы" },
+  { name: "Кроссовский Виктор", location: "Санкт-Петербург", category: "Заводы" },
+];
 
-const PartnerCategory = ({ category, partners }) => {
-  return (
-    <div className="partner-category">
-      <div className="category-header">
-        <h2>{category}</h2>
-        <a href="#all" className="view-all">Все {category.toLowerCase()}</a>
-      </div>
-      <div className="partners-list">
-        {partners.map((partner, index) => (
-          <PartnerCard key={index} {...partner} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const Partners = () => {
-  const partnerData = [
-    {
-      category: 'Архитекторы',
-      partners: [
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-      ],
-    },
-    {
-      category: 'Дизайнеры',
-      partners: [
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-      ],
-    },
-    {
-      category: 'Заводы',
-      partners: [
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-        { name: 'Кроссовский Виктор', location: 'Санкт-Петербург', image: partnerImage },
-      ],
-    },
-  ];
-
+const Partner = () => {
+  const categories = ["Архитекторы", "Дизайнеры", "Заводы"];
+  
   return (
     <div className="partners-container">
       <h1>Партнеры сервиса</h1>
-      {partnerData.map((data, index) => (
-        <PartnerCategory key={index} {...data} />
+      {categories.map(category => (
+        <div key={category} className="category-section">
+          <h2>{category}</h2>
+          <div className="partners-grid">
+            {partners.filter(partner => partner.category === category).map((partner, index) => (
+              <div key={index} className="partner-card">
+                <img src={partnerImage} alt={partner.name} className="partner-image" />
+                <div className="partner-info">
+                  <h3>{partner.name}</h3>
+                  <p>{partner.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <a href="#" className="view-all">Все {category.toLowerCase()}</a>
+        </div>
       ))}
-      <button className="join-partner-button">Стать партнером сервиса</button>
+      <button className="become-partner">Стать партнером сервиса</button>
     </div>
   );
 };
 
-export default Partners;
+export default Partner;
