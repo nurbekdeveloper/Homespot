@@ -3,10 +3,12 @@ import { Suspense, lazy } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import {Routes,Route} from "react-router-dom"
+
 const Navbar = lazy(()=>import("./componenets/common/navbar/Navbar"))
 const Footer = lazy(()=>import("./componenets/common/footer/Footer"))
 const Contact = lazy(()=>import("./pages/contact/Contact"))
 const Worker = lazy(()=>import("./pages/worker/Worker"))
+const About = lazy(()=>import("./pages/about/About"))
 const Main = lazy(()=>import("./pages/main"))
 
 
@@ -22,12 +24,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Main/>}/>
             <Route path="/contact" element={<Contact/>}/>
-            <Route path="/contact" element={<Contact/>}/>
-            <Route path="/worker" element={<Worker/>}/>
+
+            <Route path="/about" element={<About/>}/>
 
           </Routes>
 
-        <Footer/>
+
       </Suspense>
     </div>
 

@@ -1,26 +1,26 @@
 export const nav = [
   {
-    text: "home",
+    text: "ГЛАВНАЯ",
     path: "/",
   },
   {
-    text: "about",
+    text: "СТРОИТЕЛЬСТВО ДОМОВ",
     path: "/about",
   },
   {
-    text: "services",
+    text: "НАШИ УСЛУГИ",
     path: "/services",
   },
   {
-    text: "blog",
-    path: "/blog",
+    text: "ПРОЕКТИРОВАНИЕ",
+    path: "/design",
   },
   {
-    text: "pricing",
-    path: "/pricing",
+    text: "О НАС",
+    path: "/about",
   },
   {
-    text: "contact",
+    text: "КОНТАКТЫ ",
     path: "/contact",
   },
 ]

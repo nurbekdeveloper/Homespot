@@ -32,12 +32,6 @@ function Main() {
       <AboutService/>
       <Partner/>
       <Tree/>
-
-
-
-
-
-
     </div>
   )
 }
