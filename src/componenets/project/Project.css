@@ -1,0 +1,32 @@
+.projects {
+    text-align: center;
+    padding: 2em;
+  }
+  
+  .projects-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  .projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+  }
+  
+  .projects-button {
+    background-color: #8bc34a;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 1em;
+    border-radius: 5px;
+  }
+  
+  .projects-button:hover {
+    background-color: #7cb342;
+  }
+  

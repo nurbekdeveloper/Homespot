@@ -10,6 +10,10 @@ import Navbar from '../componenets/navbar/Navbar'
 import Technology from '../componenets/technology/Technology'
 import UsefulLinks from '../componenets/usefulLinks/UsefulLinks'
 import Tree from '../componenets/trees/Tree'
+import Projects from '../componenets/project/Projects'
+import Compare from '../componenets/compare/Compare'
+import Frame from '../componenets/frame/Frame'
+
 
 
 
@@ -23,6 +27,9 @@ function Main() {
       <Technology/>
       <BuildingTypes/>
       <UsefulLinks/>
+      <Projects/>
+      <Compare/>
+      <Frame/>
       <Tree/>
       <Footer/>
 

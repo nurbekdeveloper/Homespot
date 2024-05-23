@@ -1,0 +1,42 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s;
+    flex: 1 1 calc(20% - 1em);
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    max-width: 420px;
+    justify-content: space-between;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 1em;
+  }
+  
+  .card-title {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .card-text {
+    margin: 0.2em 0;
+  }
+  
+  .card-price {
+    color: green;
+    font-size: 1.4em;
+    font-weight: bold;
+  }
+  
