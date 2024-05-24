@@ -3,6 +3,8 @@ import React from 'react';
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
 import Navbar from '../../componenets/common/navbar/Navbar';
+import Footer from '../../componenets/common/footer/Footer';
+import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
 
 
 const recommendations = [
@@ -71,6 +73,9 @@ const House= () => {
         ))}
       </div>
     </div>
+    <FaqQuestion/>
+    <Footer/>
+
     </div>
   );
 };
