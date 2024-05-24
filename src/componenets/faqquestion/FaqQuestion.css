@@ -1,0 +1,76 @@
+/* src/components/FAQ.css */
+
+.faq-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.faq {
+  flex: 1 1 45%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  margin-top: 10px;
+}
+
+.faq-image {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form {
+  flex: 1 1 45%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.contact-form h3 {
+  margin-bottom: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+  .faq, .contact-form {
+    flex: 1 1 100%;
+  }
+}
