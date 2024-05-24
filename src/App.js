@@ -3,6 +3,7 @@ import { Suspense, lazy } from 'react';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import {Routes,Route} from "react-router-dom"
+import House from './pages/houses/Houses';
 
 const Navbar = lazy(()=>import("./componenets/common/navbar/Navbar"))
 const Footer = lazy(()=>import("./componenets/common/footer/Footer"))
@@ -26,6 +27,7 @@ function App() {
             <Route path="/contact" element={<Contact/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/design" element={<Worker/>}/>
+            <Route path="/project" element={<House/>}/>
 
           </Routes>
 

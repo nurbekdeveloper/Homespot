@@ -5,7 +5,7 @@ export const nav = [
   },
   {
     text: "СТРОИТЕЛЬСТВО ДОМОВ",
-    path: "/about",
+    path: "/project",
   },
   {
     text: "НАШИ УСЛУГИ",

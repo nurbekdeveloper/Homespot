@@ -27,7 +27,7 @@ function Main() {
       <Partner/>
       <Tree/>
       <FaqQuestion/>
-      <House/>
+
       <Footer/>
     </div>
   )
