@@ -2,34 +2,36 @@
 .house-grid-container {
     max-width: 1400px;
     margin: 0 auto;
- 
+
     padding: 20px;
     font-family: Arial, sans-serif;
   }
-  
+
   .haeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
     margin-bottom: 20px;
   }
-  
+
   .header h1 {
     font-size: 2.5em;
   }
-  
+
   .header p {
     font-size: 1.2em;
     color: green;
   }
-  
+
   .house-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 53px;
+    gap: 30px;
+    justify-content: center;
+    /* align-items: center; */
   }
-  
+
   .house-card {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -41,38 +43,38 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .house-image {
     width: 100%;
     height: auto;
   }
-  
+
   .house-info {
     padding: 15px;
   }
-  
+
   .house-info h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
   }
-  
+
   .house-info p {
     font-size: 1em;
     margin-bottom: 5px;
   }
-  
+
   .price {
     font-size: 1.2em;
     color: green;
     font-weight: bold;
   }
-  
+
   .pagination {
     display: flex;
     justify-content: center;
     margin: 20px 0;
   }
-  
+
   .pagination button {
     background: none;
     border: none;
@@ -81,7 +83,7 @@
     cursor: pointer;
     margin: 0 5px;
   }
-  
+
   .filter-button {
     display: block;
     width: 100%;
@@ -95,18 +97,18 @@
     cursor: pointer;
     font-size: 1.2em;
   }
-  
+
   @media (max-width: 768px) {
     .house-grid {
       flex-direction: column;
       align-items: center;
     }
-  
+
     .house-card {
       margin-bottom: 20px;
     }
   }
-  
+
 
 
   /* two section  */
@@ -117,20 +119,20 @@
     padding: 20px;
     font-family: Arial, sans-serif;
   }
-  
+
   .recommendations-container h1 {
     font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
   }
-  
+
   .recommendations-grid {
     display: flex;
     gap: 20px;
     overflow-x: auto;
     padding: 20px 0;
   }
-  
+
   .recommendation-card {
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -143,29 +145,28 @@
     align-items: center;
     flex: none;
   }
-  
+
   .recommendation-image {
     width: 100%;
     height: auto;
   }
-  
+
   .recommendation-info {
     padding: 10px;
   }
-  
+
   .recommendation-info h2 {
     font-size: 1.2em;
     margin: 0;
   }
-  
+
   @media (max-width: 768px) {
     .recommendations-grid {
       flex-direction: column;
       align-items: center;
     }
-  
+
     .recommendation-card {
       margin-bottom: 20px;
     }
   }
-  

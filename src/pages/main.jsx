@@ -10,6 +10,7 @@ import Tree from '../componenets/trees/Tree'
 import Partner from '../componenets/partneer/Partner'
 import FaqQuestion from '../componenets/faqquestion/FaqQuestion'
 import CardContainer from '../componenets/project/CardContainer'
+import House from './houses/Houses'
 
 
 function Main() {
@@ -26,6 +27,7 @@ function Main() {
       <Partner/>
       <Tree/>
       <FaqQuestion/>
+      <House/>
       <Footer/>
     </div>
   )

@@ -13,7 +13,7 @@ const Navbar = () => {
           <div className='logo'>
             <img src={logo} alt='' />
           </div>
-          <div className='nav'>
+          <div className='nav'  style={{zIndex:12}}>
             <ul className={navList ? "small" : "flex"}>
               {nav.map((list, index) => (
                 <li key={index}>
