@@ -48,3 +48,13 @@
 .foundation-card-button:hover {
   background-color: #c0392b;
 }
+
+@media only screen and (max-width: 768px) {
+  .foundation-card {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .foundation-card-image{
+    width: 90%;
+  }
+}
