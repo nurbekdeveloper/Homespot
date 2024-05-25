@@ -28,7 +28,7 @@ function Main() {
       <Partner/>
       <Tree/>
       <FaqQuestion/>
-    <ServiceCardContainer/>
+   
       <Footer/>
     </div>
   )
