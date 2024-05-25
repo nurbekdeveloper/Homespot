@@ -2,10 +2,7 @@
 .footer-container {
   background-color: #111;
   color: #fff;
-  width: 100%;
- 
-
-  padding: 10px 5px;
+  padding: 40px 20px;
   font-family: Arial, sans-serif;
 }
 
@@ -13,10 +10,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-
-  
 }
 
 .footer-column {
