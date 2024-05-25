@@ -7,7 +7,6 @@ import personImage from '../../Assets/personal.png';
 import Navbar from '../../componenets/common/navbar/Navbar';
 import image from '../../Assets/profilImg.png';
 import Icon from '../../Assets/Icon.webp';
-import { icon } from '@fortawesome/fontawesome-svg-core';
 import ProjectOf from '../../componenets/projectvedio/ProjectV';
 import ContactForm from '../../componenets/form/ContactForm';
 import Footer from '../../componenets/common/footer/Footer';

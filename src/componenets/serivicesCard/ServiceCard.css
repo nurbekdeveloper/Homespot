@@ -1,15 +1,16 @@
 .foundation-card {
   border: 1px solid #e0e0e0;
   border-radius: 8px;
-  overflow: hidden;
-  width: 300px;
+  display: flex;
+  width: 800px;
   margin: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
 
 .foundation-card-image {
-  width: 100%;
+  width: 40%;
+  padding: 10px;
   height: auto;
 }
 

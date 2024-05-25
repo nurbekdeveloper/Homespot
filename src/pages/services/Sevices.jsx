@@ -1,18 +1,22 @@
-import React from 'react';
-import './FoundationCard.css';
+import React from 'react'
+import Navbar from '../../componenets/common/navbar/Navbar'
+import Header from '../../componenets/header/Header'
+import ServiceCardContainer from '../../componenets/serivicesCard/ServiceCardContainer'
+import AboutService from '../../componenets/ourserves/AboutService'
+import ContactForm from '../../componenets/form/ContactForm'
+import Footer from '../../componenets/common/footer/Footer'
 
-const FoundationCard = ({ image, title, description, price, buttonText }) => {
-    return (
-        <div className="foundation-card">
-            <img src={image} alt={title} className="foundation-card-image" />
-            <div className="foundation-card-content">
-                <h3 className="foundation-card-title">{title}</h3>
-                <p className="foundation-card-description">{description}</p>
-                <p className="foundation-card-price">{price}</p>
-                <button className="foundation-card-button">{buttonText}</button>
-            </div>
-        </div>
-    );
-};
+function Sevices() {
+  return (
+    <div>
+      <Navbar/>
+      <Header/>
+      <ServiceCardContainer/>
+      <AboutService/>
+      <ContactForm/>
+      <Footer/>
+    </div>
+  )
+}
 
-export default FoundationCard;
+export default Sevices

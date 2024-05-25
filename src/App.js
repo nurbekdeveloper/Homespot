@@ -10,6 +10,7 @@ const Footer = lazy(()=>import("./componenets/common/footer/Footer"))
 const Contact = lazy(()=>import("./pages/contact/Contact"))
 const Worker = lazy(()=>import("./pages/worker/Worker"))
 const About = lazy(()=>import("./pages/about/About"))
+const Services = lazy(()=>import("./pages/services/Sevices"))
 const Main = lazy(()=>import("./pages/main"))
 
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/about" element={<About/>}/>
             <Route path="/design" element={<Worker/>}/>
             <Route path="/project" element={<House/>}/>
+            <Route path="/services" element={<Services/>}/>
 
           </Routes>
 
