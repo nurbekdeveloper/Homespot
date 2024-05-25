@@ -4,7 +4,6 @@ import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import {Routes,Route} from "react-router-dom"
 import House from './pages/houses/Houses';
-
 const Navbar = lazy(()=>import("./componenets/common/navbar/Navbar"))
 const Footer = lazy(()=>import("./componenets/common/footer/Footer"))
 const Contact = lazy(()=>import("./pages/contact/Contact"))

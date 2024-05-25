@@ -1,5 +1,6 @@
 // src/HouseGrid.js
 import React from 'react';
+
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
 import Navbar from '../../componenets/common/navbar/Navbar';
@@ -27,6 +28,7 @@ const houses = [
 ];
 
 const House= () => {
+ 
   return (
     <div>
         <Navbar/>

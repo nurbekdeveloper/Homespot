@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './modal.css';
 import quoteImage from '../../Assets/person.png'; // Update the path to your image file
+import { Button, Modal } from 'antd';
+const Modals = (props) => {
+  const {open,setModal2Open} = props
 
-const Modal = () => {
   return (
-    <div className="quote-section">
+    <>
+      <Modal
+        title="Vertically centered modal dialog"
+        width={1000}
+        centered
+        open={open}
+        onOk={() => setModal2Open(false)}
+        onCancel={() => setModal2Open(false)}
+      >
+        <div className="quote-section">
       <div className="quote-form">
         <input type="text" placeholder="Имя" className="quote-input" />
         <input type="email" placeholder="Электронная почта" className="quote-input" />
@@ -13,7 +24,7 @@ const Modal = () => {
         <div className="quote-attach">
           <span>+ Прикрепить файлы</span>
         </div>
-        <button className="quote-button">Отправить</button>
+        <button className="quote-button" onClick={() => setModal2Open(false)}>Отправить</button>
         <div className="quote-icons">
           <span>📧</span>
           <span>📱</span>
@@ -24,7 +35,11 @@ const Modal = () => {
         <img src={quoteImage} alt="Project Quote" />
       </div>
     </div>
+      </Modal>
+  
+    
+      </>
   );
 };
 
-export default Modal;
+export default Modals;
