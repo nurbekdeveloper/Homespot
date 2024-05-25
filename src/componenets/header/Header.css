@@ -1,10 +1,11 @@
 .header {
   position: relative;
   z-index: -100;
-  height: 87vh;
+  height: 50vh;
   background: url('../../Assets/mai.png') no-repeat center center/cover;
   display: flex;
   justify-content: center;
+
   align-items: center;
 
   color: white;
