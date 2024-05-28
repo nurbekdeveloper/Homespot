@@ -107,11 +107,10 @@ const Worker = () => {
       </div>
     </div>
     <ProjectOf/>
-    <div className="containerr">
+   
     <ContactForm/>
     <Footer/>
-    </div>
-
+    
 
     </div>
 

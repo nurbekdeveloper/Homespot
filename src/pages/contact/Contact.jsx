@@ -14,12 +14,12 @@ function Contact() {
   return (
     <div>
         <div className="nav">   <Navbar/></div>
-        <div className="containerr">
+        
         <Modal/>
         <AboutService/>
         <Partner/>
         <Footer/>
-        </div>
+        
       
     </div>
   )
