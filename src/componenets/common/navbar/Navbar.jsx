@@ -1,43 +1,55 @@
-import React, { useState } from "react"
-import "./Navbar.css"
-import { nav } from "../../data/Data"
-import { Link } from "react-router-dom"
-import logo from "../../../Assets/Logo.png"
+import React, { useState } from 'react';
+import './Navbar.css';
+import logo from '../../../Assets/Logo.png'; // Ensure you have the logo image
+
 const Navbar = () => {
-  const [navList, setNavList] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-
-      <header>
-        <div className='container flex'>
-          <div className='logo'>
-            <img src={logo} alt='' />
-          </div>
-          <div className='nav'  style={{zIndex:12}}>
-            <ul className={navList ? "small" : "flex"}>
-              {nav.map((list, index) => (
-                <li key={index}>
-                  <Link to={list.path}>{list.text}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className='button flex'>
-            <h4>
-              <span>2</span> My List
-            </h4>
-            <button className='btn1'>
-              <i className='fa fa-sign-out'></i> Sign In
-            </button>
-          </div>
-
-          <div className='toggle'>
-            <button onClick={() => setNavList(!navList)}>{navList ? <i className='fa fa-times'></i> : <i className='fa fa-bars'></i>}</button>
-          </div>
+    <div className="main-component">
+      <header className="header">
+        <div className="header-logo">
+          <img src={logo} alt="Трест33" />
+        </div>
+        <div className="header-contact">
+          <a href="tel:+74922379114">+7 (4922) 37-91-14</a>
+        </div>
+        <div className="header-menu-icon">
+          <button onClick={() => setMenuOpen(true)}>☰</button>
         </div>
       </header>
 
-  )
-}
+      <div className={`menu ${menuOpen ? 'open' : ''}`}>
+        <div className="menu-header">
+          <button onClick={() => setMenuOpen(false)}>✖</button>
+        </div>
+        <ul className="menu-list">
+          <li>Главная</li>
+          <li>Строительство домов</li>
+          <li>Коттеджные поселки</li>
+          <li>Строительные услуги</li>
+          <li>Проектирование</li>
+          <li>Наши работы</li>
+          <li>Избранное</li>
+          <li>О нас</li>
+          <li>Ипотека</li>
+          <li>Контакты</li>
+        </ul>
+        <div className="menu-footer">
+          <p>Свяжитесь с нами:</p>
+          <p>+7 (4922) 37-91-14</p>
+          <p>г. Владимир, ул. Мира, д. 155, помещение 1</p>
+          <p>info@trest33.ru</p>
+          <div className="menu-social">
+            <a href="#"><i className="fa fa-telegram"></i></a>
+            <a href="#"><i className="fa fa-whatsapp"></i></a>
+            <a href="#"><i className="fa fa-vk"></i></a>
+            <a href="#"><i className="fa fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

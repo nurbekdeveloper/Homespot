@@ -15,7 +15,7 @@ const Worker = () => {
    
     return (
         <div>
-         <Navbar/>
+         
             <div className="profile-card">
                 <nav className="breadcrumb">
                     <a href="#">Главная</a> / <a href="#">Архитектор</a> / <a href="#">Анастасия Вивенцова</a>
@@ -107,9 +107,9 @@ const Worker = () => {
       </div>
     </div>
     <ProjectOf/>
-   
+  
     <ContactForm/>
-    <Footer/>
+    
     
 
     </div>

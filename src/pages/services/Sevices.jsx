@@ -12,12 +12,12 @@ function Sevices() {
       }, [])
   return (
     <div>
-      <Navbar/>
+    
       <Header/>
       <ServiceCardContainer/>
       <AboutService/>
       <ContactForm/>
-      <Footer/>
+     
     </div>
   )
 }

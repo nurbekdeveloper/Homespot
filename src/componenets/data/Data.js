@@ -1,29 +1,4 @@
-export const nav = [
-  {
-    text: "ГЛАВНАЯ",
-    path: "/",
-  },
-  {
-    text: "СТРОИТЕЛЬСТВО ДОМОВ",
-    path: "/project",
-  },
-  {
-    text: "НАШИ УСЛУГИ",
-    path: "/services",
-  },
-  {
-    text: "ПРОЕКТИРОВАНИЕ",
-    path: "/design",
-  },
-  {
-    text: "О НАС",
-    path: "/about",
-  },
-  {
-    text: "КОНТАКТЫ ",
-    path: "/contact",
-  },
-]
+
 export const featured = [
   {
     cover: "../images/hero/h1.png",

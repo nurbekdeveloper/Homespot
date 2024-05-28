@@ -17,7 +17,7 @@ import ServiceCardContainer from '../componenets/serivicesCard/ServiceCardContai
 function Main() {
   return (
     <div>
-      <Navbar/>
+   
       <Header/>
       <BuildingTypes/>
       <Technology/>
@@ -29,7 +29,7 @@ function Main() {
       <Tree/>
       <FaqQuestion/>
    
-      <Footer/>
+      
     </div>
   )
 }

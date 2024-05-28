@@ -3,8 +3,7 @@ import React from 'react';
 
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
-import Navbar from '../../componenets/common/navbar/Navbar';
-import Footer from '../../componenets/common/footer/Footer';
+
 import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
 
 
@@ -31,7 +30,7 @@ const House= () => {
  
   return (
     <div>
-        <Navbar/>
+       
         <div className="house-grid-container">
       <div className="haeader">
         <h1>Дома 100 м2</h1>
@@ -76,7 +75,7 @@ const House= () => {
       </div>
     </div>
     <FaqQuestion/>
-    <Footer/>
+  
 
     </div>
   );
