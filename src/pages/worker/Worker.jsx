@@ -40,35 +40,35 @@ const Worker = () => {
                         <button className="consultation-button">Консультация</button>
                     </div>
                 </div>
-                <div className="general-info-container">
-                    <h1>Общая информация</h1>
-                    <div className="info-columns">
-                        <div className="info-column">
+                    <div className="info-container">
+                        <h1>Общая информация</h1>
+                        <div className="info-grid">
+                            <div>
                             <div className="info-item">
-                                <span>Страна  .............................................................................................</span>
+                                <span>Страна</span>
                                 <span>Россия</span>
                             </div>
                             <div className="info-item">
-                                <span>Языки  .............................................................................................</span>
+                                <span>Языки</span>
                                 <span>Русский</span>
                             </div>
                             <div className="info-item">
-                                <span>Опыт ...................................................................................................</span>
+                                <span>Опыт</span>
                                 <span>13 лет</span>
                             </div>
-                        </div>
-                        <div className="info-column">
-                            <div className="info-item">
-                                <span>Форма занятости </span>
-                                <span>........................................................................................Индивидуальный предприниматель</span>
                             </div>
-                            <div className="info-item">
-                                <span>Стайл  </span>
-                                <span>.............................................................................................Современная классика, американская классика, современный стиль, контемпорари</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        <div>
+          <div className="info-item">
+            <span>Форма занятости</span>
+            <span>Индивидуальный предприниматель</span>
+          </div>
+          <div className="info-item">
+            <span>Стайл</span>
+            <span>Современная классика, американская классика, современный стиль, контемпорари</span>
+          </div>
+        </div>
+      </div>
+    </div>
             </div>
             <div className="design-studio-container">
                 <div className="description-section">

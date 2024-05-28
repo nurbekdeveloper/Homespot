@@ -1,7 +1,7 @@
 /* File: src/components/ProfileCard.css */
 
 .profile-card {
-    max-width: 1360px;
+    max-width: 1700px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
@@ -278,6 +278,50 @@
   
     .award-item {
       justify-content: center;
+    }
+  }
+  .info-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  
+  .info-item span:first-child {
+    flex: 1;
+  }
+  
+  .info-item span:last-child {
+    flex: 1;
+    text-align: right;
+  }
+  
+  @media (max-width: 600px) {
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    .info-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .info-item span:last-child {
+      text-align: left;
+      padding-top: 5px;
     }
   }
   
