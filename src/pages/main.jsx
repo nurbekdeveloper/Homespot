@@ -19,7 +19,7 @@ function Main() {
     <div>
    
       <Header/>
-      <BuildingTypes/>
+    
       <Technology/>
       <UsefulLinks/>
       <CardContainer/>

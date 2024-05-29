@@ -61,19 +61,7 @@ const House= () => {
       </div>
       <button className="filter-button">Расширенный фильтр</button>
     </div>
-    <div className="recommendations-container">
-      <h1>Рекомендуем посмотреть</h1>
-      <div className="recommendations-grid">
-        {recommendations.map(recommendation => (
-          <div key={recommendation.id} className="recommendation-card">
-            <img src={recommendation.image} alt={recommendation.name} className="recommendation-image" />
-            <div className="recommendation-info">
-              <h2>{recommendation.name}</h2>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div>
+   
     <FaqQuestion/>
   
 
