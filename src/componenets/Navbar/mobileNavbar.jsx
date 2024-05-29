@@ -22,7 +22,7 @@ const Resnav = () => {
            <Link className='nav-mebel' onClick={()=>setSecondnav(true)}  id={`${(pathname === "construction") ? "active" : ""}`} ><div>Строительство </div><div><GrNext/></div></Link>
            
            <Link to={"/services"} className='nav-item' id={`${(pathname === "/services") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Наши Услуги </Link>
-           <Link to={"/delivery"} className='nav-item' id={`${(pathname === "/delivery") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Проектирование </Link>
+           <Link to={"/design"} className='nav-item' id={`${(pathname === "/design") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Проектирование </Link>
 
            <Link to={"/about"} className='nav-item' id={`${(pathname === "/about") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>О нас</Link>
            <Link to={"/project"} className='nav-item' id={`${(pathname === "/project") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Наши работы </Link>
