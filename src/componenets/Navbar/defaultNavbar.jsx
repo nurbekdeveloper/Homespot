@@ -23,8 +23,12 @@ const Navbar = () => {
   }
   const {pathname} = useLocation()
   const [dropdown,setDropDown] = useState(true)
+  const [dropdown2,setDropDown2] = useState(true)
 //   const {dropdown,setDropDown} = useContext(ItemContext)
- 
+ const hideDropdown =()=>{
+  setDropDown(true)
+  setDropDown2(true)
+ }
   return (
     <div className='navbar'>
       <div className="nav">
@@ -35,13 +39,13 @@ const Navbar = () => {
       </div>
 
       <div className='navbar_nav'>
-      <Link to={"/"} onClick={()=>setDropDown(true)} className={`${(pathname === "/") ? "active" : "navbar_link"}`}>Главная  </Link>
+      <Link to={"/"} onClick={hideDropdown} className={`${(pathname === "/") ? "active" : "navbar_link"}`}>Главная  </Link>
         <Link id='dropdown' to={"/construction"} onClick={()=>setDropDown(prev=>!prev)} className={`${(pathname === "construction") ? "active" : "navbar_link"}`} > Строительство  &nbsp; <BsChevronDown/></Link>
-        <Link id='dropdown' to={"/services"}  onClick={()=>setDropDown(prev=>!prev)}  className={`${(pathname === "/about") ? "active" : "navbar_link"}`}>Наши Услуги   &nbsp; <BsChevronDown/></Link>
-        <Link to={"/design"} onClick={()=>setDropDown(true)} className={`${(pathname === "/design") ? "active" : "navbar_link"}`}>Проектирование </Link>
-        <Link to={"/about"} onClick={()=>setDropDown(true)} className={`${(pathname === "/sevices") ? "active" : "navbar_link"}`}>  О Нас </Link>
-        <Link to={"/project"} onClick={()=>setDropDown(true)} className={`${(pathname === "/project") ? "active" : "navbar_link"}`}> Наши работы </Link>
-        <Link to={"/contact"} onClick={()=>setDropDown(true)} className={`${(pathname === "/contact") ? "active" : "navbar_link"}`}> Контакты </Link>
+        <Link id='dropdown' to={"/services"}  onClick={()=>setDropDown2(prev=>!prev)}  className={`${(pathname === "/about") ? "active" : "navbar_link"}`}>Наши Услуги   &nbsp; <BsChevronDown/></Link>
+        <Link to={"/design"} onClick={hideDropdown} className={`${(pathname === "/design") ? "active" : "navbar_link"}`}>Проектирование </Link>
+        <Link to={"/about"} onClick={hideDropdown} className={`${(pathname === "/sevices") ? "active" : "navbar_link"}`}>  О Нас </Link>
+        <Link to={"/project"} onClick={hideDropdown} className={`${(pathname === "/project") ? "active" : "navbar_link"}`}> Наши работы </Link>
+        <Link to={"/contact"} onClick={hideDropdown} className={`${(pathname === "/contact") ? "active" : "navbar_link"}`}> Контакты </Link>
       </div>
       
       <a href='tel:+998712357447' className='navbar_phone'>
@@ -59,7 +63,7 @@ const Navbar = () => {
 
         </div>
       </div>
-      <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >
+      <div className={ `dropdown ${dropdown2 ? 'open' : ""}`}  >
         <div className='nav_item'>
           <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Домов</Link></div>
           <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Бани</Link></div>

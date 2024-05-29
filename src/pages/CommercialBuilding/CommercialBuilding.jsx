@@ -1,9 +1,11 @@
 // File: src/components/CommercialBuilding.js
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import './CommercialBuilding.css';
 import houseImage from '../../Assets/houses.png';
 import buildingImage from '../../Assets/CommercialBuilding.png'; // Adjust path as necessary
+import { useLocation, useParams } from 'react-router-dom';
+import { fundamentt } from '../../componenets/data/Data';
 const houses = [
   { id: 1, name: "Glass House 25A", type: "Баня", technology: "Клееный брус", dimensions: "100x100x100", price: "1 000 000 Р", image: houseImage },
   { id: 2, name: "Kontio Laaksolahti", image: houseImage },
@@ -15,6 +17,15 @@ const houses = [
   { id: 8, name: "Г-69", image: houseImage },
 ];
 const CommercialBuilding = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  const {slug} = useParams()
+  
+  const filterBuild = fundamentt.find(c=>c.url === slug)
+
+
   return (
 <>
 <div className="commercial-building">
@@ -22,7 +33,7 @@ const CommercialBuilding = () => {
         Главная / Построить коммерческий объект
       </div>
       <h1 className="title">
-        Построить коммерческий объект
+       {filterBuild.title}
       </h1>
       <div className="content">
         <div className="text">
@@ -35,7 +46,7 @@ const CommercialBuilding = () => {
           </p>
         </div>
         <div className="image">
-          <img src={buildingImage} alt="Commercial Building" />
+          <img src={filterBuild.img} alt="Commercial Building" />
         </div>
       </div>
     </div>
