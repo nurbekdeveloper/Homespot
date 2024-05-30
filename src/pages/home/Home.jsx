@@ -21,9 +21,10 @@ const Home = () => {
     window.scrollTo(0, 0)
   }, [])
 
-  const {slug} = useParams()
+  const {slug}= useParams()
+  console.log(slug);
 
-  const filterBuild = house.find(c=>c.url === slug)
+  const filterHome = house.find(c=>c.url === slug)
 
 
   return (
@@ -33,19 +34,19 @@ const Home = () => {
         Главная / Построить коммерческий объект
       </div>
       <h1 className="title">
-       {filterBuild.title}
+       {filterHome.title}
       </h1>
       <div className="content">
         <div className="text">
           <p>
-            {filterBuild.decription}
+            {filterHome.decription}
           </p>
           <p>
             <strong>А ещё дом из дерева</strong> долговечность, неповторимый внешний вид и необыкновенные впечатления. Только представьте, как приятно отдыхать на собственной территории! Можно приготовить мясо, поиграть в активные игры, позагорать или просто почитать книгу в гамаке
           </p>
         </div>
         <div className="image">
-          <img src={filterBuild.img} alt="Commercial Building" />
+          <img src={filterHome.img} alt="Commercial Building" />
         </div>
       </div>
     </div>

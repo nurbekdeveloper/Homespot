@@ -3,9 +3,9 @@
 import React, { useEffect } from 'react';
 import './CommercialBuilding.css';
 import houseImage from '../../Assets/houses.png';
-import buildingImage from '../../Assets/CommercialBuilding.png'; // Adjust path as necessary
-import { useLocation, useParams } from 'react-router-dom';
+
 import { fundamentt } from '../../componenets/data/Data';
+import { useParams } from 'react-router-dom';
 const houses = [
   { id: 1, name: "Glass House 25A", type: "Баня", technology: "Клееный брус", dimensions: "100x100x100", price: "1 000 000 Р", image: houseImage },
   { id: 2, name: "Kontio Laaksolahti", image: houseImage },

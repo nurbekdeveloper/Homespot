@@ -22,7 +22,7 @@ const BuildingTypes = (url ) => {
     return (
     <div>
         <h2 className='title'>Типы строений</h2>
-            <div className="building-types"  onClick={()=>navigate('/construction'+ url)}>
+            <div className="building-types" >
 
             {buildingTypes.map((type, index) => (
                 <BuildingTypeCard

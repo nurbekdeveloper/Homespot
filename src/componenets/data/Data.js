@@ -13,10 +13,10 @@ import fundament from "../../Assets/beton.webp"
 // Start Home section
 
 const house = [
-  {id :1 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
-  {id :2 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
-  {id :3 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
-  {id :4, title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
+  {id :1 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'home', img:fundament ,   },
+  {id :2 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'baths', img:fundament ,   },
+  {id :3 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'garages', img:fundament ,   },
+  {id :4, title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'awnings', img:fundament ,   },
 ]
 
 

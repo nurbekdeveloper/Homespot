@@ -3,7 +3,7 @@ import './ServiceCard.css';
 import Modals from '../appliacation/Modal';
 import { useNavigate } from 'react-router-dom';
 
-const ServiceCard = ({ image, title, description, price, buttonText,url }) => {
+const ServiceCard = ({ image, title, url }) => {
     const [openModal,setOpenModal] = useState(false)
     const navigate = useNavigate()
     return (
