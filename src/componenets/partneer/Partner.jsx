@@ -24,6 +24,7 @@ const Partner = () => {
       {categories.map(category => (
         <div key={category} className="category-section">
           <h2>{category}</h2>
+          <a href="#" className="view-all">Все {category.toLowerCase()}</a>
           <div className="partners-grid">
             {partners.filter(partner => partner.category === category).map((partner, index) => (
               <div key={index} className="partner-card">
@@ -35,7 +36,7 @@ const Partner = () => {
               </div>
             ))}
           </div>
-          <a href="#" className="view-all">Все {category.toLowerCase()}</a>
+          
         </div>
       ))}
       <button className="become-partner">Стать партнером сервиса</button>
