@@ -41,8 +41,7 @@ const FaqQuestion = () => {
         {activeIndex === 4 && <div className="faq-answer">Ответ на вопрос 4</div>}
       </div>
       <div className="contact-form">
-        <h3>Не нашли нужный ответ?</h3>
-        <p>Мы готовы ответить на любой ваш вопрос!</p>
+      
         <form>
           <input type="text" placeholder="Имя" required />
           <input type="email" placeholder="Электронная почта" required />
