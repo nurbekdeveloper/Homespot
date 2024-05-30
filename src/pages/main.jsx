@@ -1,4 +1,4 @@
-import BuildingTypes from '../componenets/types/BuildTypes'
+
 import Header from '../componenets/header/Header'
 import ContactForm from '../componenets/form/ContactForm'
 import AboutService from '../componenets/ourserves/AboutService'
@@ -9,6 +9,7 @@ import Tree from '../componenets/trees/Tree'
 import Partner from '../componenets/partneer/Partner'
 import FaqQuestion from '../componenets/faqquestion/FaqQuestion'
 import CardContainer from '../componenets/project/CardContainer'
+import BuildingTypes from '../componenets/types/BuildTypes'
 
 
 
@@ -19,6 +20,8 @@ function Main() {
 
       <Header/>
 
+
+      <BuildingTypes/>
       <Technology/>
       <UsefulLinks/>
       <CardContainer/>
