@@ -14,10 +14,10 @@
 
 .links-grid {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  padding: 20px;
 
-  gap: 1rem;
-  justify-content: center;
 }
 
 .links-section {
