@@ -16,7 +16,7 @@ import { Link,useLocation } from 'react-router-dom'
 
 
 const Navbar = () => {
-  
+
   const changeSlug = ()=>{
     setDropDown(true)
 
@@ -24,7 +24,7 @@ const Navbar = () => {
   const {pathname} = useLocation()
   const [dropdown,setDropDown] = useState(true)
   const [dropdown2,setDropDown2] = useState(true)
-//   const {dropdown,setDropDown} = useContext(ItemContext)
+
  const hideDropdown =()=>{
   setDropDown(true)
   setDropDown2(true)
@@ -33,7 +33,7 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="nav">
 
-      
+
       <div className='navbar_logo'>
         <Link to={'/'}><img src={logo} alt="logo" /></Link>
       </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
         <Link to={"/project"} onClick={hideDropdown} className={`${(pathname === "/project") ? "active" : "navbar_link"}`}> Наши работы </Link>
         <Link to={"/contact"} onClick={hideDropdown} className={`${(pathname === "/contact") ? "active" : "navbar_link"}`}> Контакты </Link>
       </div>
-      
+
       <a href='tel:+998712357447' className='navbar_phone'>
         <img src={call} alt="call" />
         <p>+998 94 <span>210-74-47</span></p>
@@ -55,23 +55,27 @@ const Navbar = () => {
       </div>
       <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Столы для руководителей</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Столы для сотрудников</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Столы для переговоров</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Домов</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Бани</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Гаражи</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Гаражи</Link></div>
 
-         
+
 
         </div>
       </div>
       <div className={ `dropdown ${dropdown2 ? 'open' : ""}`}  >
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Домов</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Бани</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Гаражи</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Навесы</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Монтаж фундамента</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Кровельные работы</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Наружная отделка дома</Link></div>
+
 
           {/* <div className='nav_item_link'><Link to={"/mebel/Столы для менеджеров"}  onClick={changeSlug} >Столы для менеджеров</Link></div> */}
 
+        </div>
+        <div className='nav_item'>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Внутренняя отделка дома</Link></div>
         </div>
       </div>
     </div>

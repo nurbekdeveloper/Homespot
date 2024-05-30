@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import Navbar from '../../componenets/common/navbar/Navbar'
+
 import Header from '../../componenets/header/Header'
 import ServiceCardContainer from '../../componenets/serivicesCard/ServiceCardContainer'
 import AboutService from '../../componenets/ourserves/AboutService'
 import ContactForm from '../../componenets/form/ContactForm'
-import Footer from '../../componenets/common/footer/Footer'
+
 
 function Sevices() {
     useEffect(() => {
@@ -12,12 +12,12 @@ function Sevices() {
       }, [])
   return (
     <div>
-    
+
       <Header/>
       <ServiceCardContainer/>
       <AboutService/>
       <ContactForm/>
-     
+
     </div>
   )
 }

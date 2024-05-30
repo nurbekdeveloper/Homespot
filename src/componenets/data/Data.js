@@ -10,7 +10,14 @@ import fundament from "../../Assets/beton.webp"
 //   { id: 8, name: "Г-69", image: houseImage },
 // ];
 
+// Start Home section
 
+const house = [
+  {id :1 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
+  {id :2 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
+  {id :3 , title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
+  {id :4, title :"salom " , decription:"lorem3" ,decription2:"lorem4" , url :'#', img:fundament ,   },
+]
 
 
 
@@ -22,4 +29,4 @@ const fundamentt = [
 ]
 
 
-export {fundamentt}
+export {fundamentt , house}
