@@ -7,6 +7,7 @@ import House from './pages/houses/Houses';
 import Navbar from './componenets/Navbar';
 import Footer from './componenets/common/footer/Footer'
 import AllHouseType from './pages/allHousesType/allHouseType';
+import TypesOfBeton from './pages/typesofBeton/typesOfbeton';
 // import HomePage from './pages/HomePage';
 const Contact = lazy(() => import("./pages/contact/Contact"))
 const Worker = lazy(() => import("./pages/worker/Worker"))
@@ -36,7 +37,7 @@ function App() {
           <Route path="/project" element={<House />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/services' element={<Services />} />
-          <Route path='/services/:slug' element={<CommercialBuilding />} />
+          <Route path='/services/:slug' element={< TypesOfBeton/>} />
           <Route path='/construction/:slug' element={<TypesHome/>} />
           <Route path='/construction-in/:slug/' element={<AllHouseType/>} />
         </Routes>

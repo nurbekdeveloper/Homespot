@@ -11,6 +11,7 @@ import FaqQuestion from '../componenets/faqquestion/FaqQuestion'
 import CardContainer from '../componenets/project/CardContainer'
 import BuildingTypes from '../componenets/types/BuildTypes'
 import TypesHome from '../componenets/types-home/typesHome'
+import TypesOfBeton from './typesofBeton/typesOfbeton'
 // import typesHome from './types-home/typesHome'
 
 
@@ -19,6 +20,7 @@ function Main() {
   return (
     <div>
       <Header/>
+      <TypesOfBeton/>
       <TypesHome/>
       <BuildingTypes/>
       <Technology/>
