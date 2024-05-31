@@ -17,7 +17,7 @@ const FoundationCard = ({ title, price, description, imageUrl }) => {
   );
 };
 
-const Foundationss = [
+const foundations = [
   {
     title: 'Ленточный фундамент',
     price: 'от 12 500 ₽ / куб.м',
@@ -28,6 +28,7 @@ const Foundationss = [
   {
     title: 'Монолитная плита',
     price: 'от 10 900 ₽ / куб.м',
+    url:"monolitnaya-plita",
     description: 'Данный тип фундамента считается одним из самых надёжных...',
     imageUrl: Beton
   },
@@ -58,17 +59,16 @@ const Foundationss = [
 ];
 
 const TypesOfBeton = () => {
-    // const {slug}= useParams()
-    // console.log(slug);
+    const {slug}= useParams()
   
-    // const foundations = Foundationss.filter(c=>c.url === slug)
+    const filterFoundation = foundations.filter(c=>c.url === slug)
   return (
     <div className="App">
       <header className="App-header">
         <h1>Виды фундаментов</h1>
       </header>
       <div className="foundation-types">
-        {foundations.map((foundation, index) => (
+        {filterFoundation.map((foundation, index) => (
           <FoundationCard
             key={index}
             title={foundation.title}
