@@ -43,7 +43,8 @@ const cardData = [
         dimensions: '10x10x10',
         price: '1 000 000 Р'
     }
-];
+  ];
+
 
 const CardContainer = () => {
     return (

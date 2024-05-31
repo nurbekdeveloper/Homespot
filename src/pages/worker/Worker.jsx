@@ -4,12 +4,12 @@ import React from 'react';
 import './worker.css';
 import personImage from '../../Assets/personal.png';
 // Make sure to place the image in the correct path
-import Navbar from '../../componenets/common/navbar/Navbar';
+
 import image from '../../Assets/profilImg.png';
 import Icon from '../../Assets/Icon.webp';
 import ProjectOf from '../../componenets/projectvedio/ProjectV';
 import ContactForm from '../../componenets/form/ContactForm';
-import Footer from '../../componenets/common/footer/Footer';
+
 
 const Worker = () => {
    

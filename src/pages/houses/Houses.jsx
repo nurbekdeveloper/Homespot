@@ -1,5 +1,5 @@
 // src/HouseGrid.js
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
@@ -7,13 +7,7 @@ import houseImage from '../../Assets/houses.png'; // Ensure the images are in th
 import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
 
 
-const recommendations = [
-  { id: 1, name: "Полутораэтажные", image: houseImage },
-  { id: 2, name: "Двухэтажные", image: houseImage },
-  { id: 3, name: "Трехэтажные", image: houseImage },
-  { id: 4, name: "С мансардой", image: houseImage },
-  { id: 5, name: "С цокольным этажом", image: houseImage },
-];
+
 
 const houses = [
   { id: 1, name: "Glass House 25A", type: "Баня", technology: "Клееный брус", dimensions: "100x100x100", price: "1 000 000 Р", image: houseImage },
@@ -27,15 +21,14 @@ const houses = [
 ];
 
 const House= () => {
- 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div>
        
         <div className="house-grid-container">
-      <div className="haeader">
-        <h1>Дома 100 м2</h1>
-        <p>Найдено 24 дома</p>
-      </div>
+     
       <div className="house-grid">
         {houses.map(house => (
           <div key={house.id} className="house-card">

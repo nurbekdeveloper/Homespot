@@ -2,7 +2,7 @@
 import React from 'react';
 import './ContactForm.css';
 
-const ContactForm = () => {
+function  ContactForm  () {
   return (
     <div className="all">
       <form className="form">

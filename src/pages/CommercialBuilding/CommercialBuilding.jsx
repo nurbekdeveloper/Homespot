@@ -33,7 +33,7 @@ const CommercialBuilding = () => {
         Главная / Построить коммерческий объект
       </div>
       <h1 className="title">
-       {filterBuild.title}
+       {filterBuild?.title}
       </h1>
       <div className="content">
         <div className="text">
