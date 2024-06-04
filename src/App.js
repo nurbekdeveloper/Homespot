@@ -8,7 +8,8 @@ import Navbar from './componenets/Navbar';
 import Footer from './componenets/common/footer/Footer'
 import AllHouseType from './pages/allHousesType/allHouseType';
 import TypesOfBeton from './pages/typesofBeton/typesOfbeton';
-// import HomePage from './pages/HomePage';
+import MoreInformation from './pages/albom/MoreInformation';
+
 const Contact = lazy(() => import("./pages/contact/Contact"))
 const Worker = lazy(() => import("./pages/worker/Worker"))
 const About = lazy(() => import("./pages/about/About"))
@@ -21,13 +22,13 @@ const CommercialBuilding = lazy(() => import("./pages/CommercialBuilding/Commerc
 
 
 function App() {
-  
+
   return (
 
 
     <div className="App">
       <Suspense fallback={<h1>...loader</h1>}>
-        {/* <HomePage/> */}
+
         <Navbar />
         <Routes>
           <Route path='/' element={<Main />} />
@@ -40,6 +41,8 @@ function App() {
           <Route path='/services/:slug' element={< TypesOfBeton/>} />
           <Route path='/construction/:slug' element={<TypesHome/>} />
           <Route path='/construction-in/:slug/' element={<AllHouseType/>} />
+          <Route path='/moreinformation/:slug/' element={<MoreInformation/>} />
+          {/* <Route path='' element={<MoreInformation/>} /> */}
         </Routes>
 
         <Footer />

@@ -50,7 +50,7 @@
         display: flex;
         gap: 15px;
         text-decoration: none;
-        
+
     }
     .navbar .navbar_phone p{
         font-size: 13px;
@@ -87,7 +87,7 @@
     }
     .navbar .dropdown.open{
         transition: 0.5s;
-        top:-300px  
+        top:-300px
     }
     .nav_item{
         display: grid;
@@ -140,7 +140,7 @@
     .navbar .navbar_phone{
         display: flex;
         gap: 20px;
-        
+
     }
     .navbar .navbar_phone p{
         font-size: 20px;
@@ -172,7 +172,7 @@
     }
     .navbar .dropdown.open{
         transition: 0.5s;
-        top:-300px  
+        top:-300px
     }
     .nav_item{
         display: grid;
@@ -219,7 +219,7 @@
     .navbar .navbar_phone{
         display: flex;
         gap: 25px;
-        
+
     }
     .navbar .navbar_phone p{
         font-size: 24px;
@@ -251,7 +251,7 @@
     }
     .navbar .dropdown.open{
         transition: 0.5s;
-        top:-300px  
+        top:-300px
     }
     .nav_item{
         display: grid;

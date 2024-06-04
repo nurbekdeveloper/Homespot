@@ -1,10 +1,11 @@
 // src/HouseGrid.js
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
 
 import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -20,18 +21,25 @@ const houses = [
   { id: 8, name: "Г-69", image: houseImage },
 ];
 
-const House= () => {
+const House= (url) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+
+  const [openModal,setOpenModal] = useState(false)
+  const navigate = useNavigate()
+
   return (
+
+
     <div>
-       
+
         <div className="house-grid-container">
-     
-      <div className="house-grid">
+
+      <div className="house-grid" >
         {houses.map(house => (
-          <div key={house.id} className="house-card">
+          <div key={house.id} className="house-card"  onClick={()=>navigate('/services'+ url)}>
             <img src={house.image} alt={house.name} className="house-image" />
             <div className="house-info">
               <h2>{house.name}</h2>
@@ -54,9 +62,9 @@ const House= () => {
       </div>
       <button className="filter-button">Расширенный фильтр</button>
     </div>
-   
+
     <FaqQuestion/>
-  
+
 
     </div>
   );

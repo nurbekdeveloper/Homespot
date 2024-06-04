@@ -9,9 +9,9 @@ import {GrNext,GrPrevious} from "react-icons/gr"
 const Resnav = () => {
     const [firstnav,setFirstnav] = useState(false)
     const [secondnav,setSecondnav] = useState(false)
- 
+
   const {pathname} = useLocation()
-    
+
     return (
     <div className='resnav'>
         <div className='nav-header'>
@@ -20,7 +20,7 @@ const Resnav = () => {
         </div>
         <div className={`first-nav ${firstnav ? "close" : ""}`}>
            <Link className='nav-mebel' onClick={()=>setSecondnav(true)}  id={`${(pathname === "construction") ? "active" : ""}`} ><div>Строительство </div><div><GrNext/></div></Link>
-           
+
            <Link to={"/services"} className='nav-item' id={`${(pathname === "/services") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Наши Услуги </Link>
            <Link to={"/design"} className='nav-item' id={`${(pathname === "/design") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Проектирование </Link>
 
@@ -28,19 +28,19 @@ const Resnav = () => {
            <Link to={"/project"} className='nav-item' id={`${(pathname === "/project") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Наши работы </Link>
            <Link to={"/contact"} className='nav-item' id={`${(pathname === "/contact") ? "active" : ""}`} onClick={()=>setFirstnav(false)}>Контакты</Link>
            <a className='resnav-phone' href='tel:+998712357447'>
-                <img src={call} alt="call" />
+
                 <p>+998 94 <span>210-74-47</span></p>
             </a>
         </div>
         <div className={`second-nav ${(secondnav && firstnav) ? "" : "close"}`}>
         <div className='sec-nav-mebel' onClick={()=>setSecondnav(false)}><div><GrPrevious/></div><div>Мебель</div></div>
-            
+
                 <Link className='sec-nav-item'>Домов</Link>
                 <Link className='sec-nav-item'>Бани</Link>
                 <Link className='sec-nav-item'>Гаражи</Link>
                 <Link className='sec-nav-item'>Навесы</Link>
-              
-           
+
+
         </div>
     </div>
   )

@@ -21,7 +21,9 @@ const BuildingTypes = (url ) => {
     const navigate = useNavigate()
     return (
     <div>
-        <h2 className='title'>Типы строений</h2>
+                    <h3 className='title'>Добро пожаловать на наш сайт!</h3>
+        <p > Мы предлагаем широкий спектр строительных услуг, помогая вам воплотить мечты о собственном доме в реальность. С более чем 15-летним опытом работы в Швеции и России, мы гарантируем высокое качество и надежность каждого проекта.</p>
+        {/* <h2 className='title'>Типы строений</h2> */}
             <div className="building-types" >
 
             {buildingTypes.map((type, index) => (

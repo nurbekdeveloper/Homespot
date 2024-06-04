@@ -1,19 +1,19 @@
 .App {
     text-align: center;
   }
-  
+
   .App-header {
     background-color: #282c34;
     padding: 20px;
     color: white;
   }
-  
+
   .foundation-types {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-  
+
   .foundation-card {
     border: 1px solid #ddd;
     max-width: 632px;
@@ -26,21 +26,21 @@
     text-align: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
   .foundation-image {
     width: 100%;
     height: auto;
   }
-  
+
   .foundation-content {
     padding: 16px;
   }
-  
+
   .price {
     color: red;
     font-weight: bold;
   }
-  
+
   .order-button {
     background-color: #ff5722;
     color: white;
@@ -49,8 +49,7 @@
     margin-top: 10px;
     cursor: pointer;
   }
-  
+
   .order-button:hover {
     background-color: #e64a19;
   }
-  

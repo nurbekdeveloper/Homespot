@@ -1,0 +1,262 @@
+.main-carousel {
+  margin: 20px;
+}
+
+.main {
+  text-align: center;
+  margin-top: 30px;
+  width: 60%;
+  margin: auto;
+}
+
+.flex_row {
+  justify-content: center;
+  display: flex;
+  padding-top: 20px;
+}
+
+.thumbnail {
+  padding-left: 20px;
+  width: 200px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.clicked {
+  border: 5px solid black;
+}
+
+.btns {
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  background: grey;
+}
+
+.carousel-informations {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.carousel-info {
+  width: 100%;
+}
+
+.main-1 {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .carousel-informations {
+    flex-direction: row;
+  }
+
+  .main-1, .carousel-info {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-informations {
+    flex-direction: column;
+  }
+}
+
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.details {
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  font-size: 14px;
+  color: #666;
+}
+
+.value {
+  font-size: 14px;
+  color: #333;
+}
+
+.price {
+  font-size: 20px;
+  color: #7fbf00;
+  font-weight: bold;
+  text-align: right;
+}
+
+
+
+.project-description-container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 210px  auto;
+  padding: 20px;
+}
+
+.project-header {
+  text-align: center;
+}
+
+.project-header h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project-header p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.general-info {
+  margin-top: 40px;
+}
+
+.general-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.general-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  color: #666;
+}
+
+.additional-info {
+  margin-top: 40px;
+}
+
+.additional-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.additional-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.additional-info-item {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .project-description-container {
+    padding: 10px;
+  }
+
+  .project-header h1 {
+    font-size: 24px;
+  }
+
+  .project-header p {
+    font-size: 14px;
+  }
+
+  .general-info h2,
+  .additional-info h2 {
+    font-size: 20px;
+  }
+
+  .label,
+  .value {
+    font-size: 14px;
+  }
+}
+.vector{
+
+  width: 22.5px;
+  height: 22.5px;
+  top: 0.75px;
+  left: 0.75px;
+  gap: 0px;
+  opacity: 0px;
+
+
+}
+
+
+.info-container {
+  max-width: 1800px;
+  width: 100%;
+  padding: 2rem;
+  background-color: white;
+
+  border-radius: 8px;
+}
+
+.info-title {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.info-columns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.info-column {
+  flex: 1;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.info-label {
+  flex: 0 0 auto;
+  margin-right: 0.5rem;
+}
+
+.info-dots {
+  flex: 1;
+  border-bottom: 1px dotted #000;
+  margin: 0 0.5rem;
+}
+
+.info-value {
+  flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+  .info-columns {
+      flex-direction: column;
+  }
+}

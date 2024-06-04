@@ -2,6 +2,8 @@ import React from 'react'
 import '../../'
 function HomeMainPage() {
     return (
+
+
         <div>
              <div className="container">
       {cards.map(card => (

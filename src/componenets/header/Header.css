@@ -2,7 +2,7 @@
   position: relative;
   z-index: -100;
   height: 50vh;
-  background: url('../../Assets/mai.png') no-repeat center center/cover;
+  background: url('../../Assets/mainpage2.jpg') no-repeat center center/cover;
   display: flex;
   justify-content: center;
 
@@ -10,7 +10,12 @@
 
   color: white;
 }
-
+.header h3 {
+  margin-top: 140px;
+}
+.header  p {
+  color: white;
+}
 .overlay {
   position: absolute;
   top: 0;

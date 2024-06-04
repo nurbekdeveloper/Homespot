@@ -1,16 +1,16 @@
 import fundament from "../../Assets/beton.webp"
 
-// homepage img 
+// homepage img
 
 import house1 from '../../Assets/useful24.png';
 import house2 from '../../Assets/useful24.png';
 import house3 from '../../Assets/useful24.png';
 
-// Card data img  
+// Card data img
 
 
 
-// house img 
+// house img
 import houseImage from '../../Assets/houses.png';
 
 
@@ -76,10 +76,8 @@ const Homepage = [
     link: '#'
   }
 ];
+// foundation beton
 
-// card data page 
+// card data page
 
 export {fundamentt , house, Homepage,CardsImages }
-
-
-

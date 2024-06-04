@@ -1,4 +1,4 @@
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 
 //style
 import "./defaultNavbar.css"
@@ -17,6 +17,23 @@ import { Link,useLocation } from 'react-router-dom'
 
 const Navbar = () => {
 
+  const [show, setShow] = useState(false)
+  const controlNavbar = () => {
+      if (window.scrollY > 250 ) {
+          setShow(true)
+          setDropDown(true)
+          setDropDown2(true)
+      }else{
+        setShow(false)
+      }
+  }
+
+  useEffect(() => {
+      window.addEventListener('scroll', controlNavbar)
+      return () => {
+          window.removeEventListener('scroll', controlNavbar)
+      }
+  }, [])
   const changeSlug = ()=>{
     setDropDown(true)
 
@@ -49,8 +66,8 @@ const Navbar = () => {
       </div>
 
       <a href='tel:+998712357447' className='navbar_phone'>
-        <img src={call} alt="call" />
-        <p>+998 94 <span>210-74-47</span></p>
+
+        <p>+7 <span> (123) 456-7890</span></p>
       </a>
       </div>
       <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >

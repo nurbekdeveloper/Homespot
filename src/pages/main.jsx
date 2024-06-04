@@ -10,9 +10,10 @@ import Partner from '../componenets/partneer/Partner'
 import FaqQuestion from '../componenets/faqquestion/FaqQuestion'
 import CardContainer from '../componenets/project/CardContainer'
 import BuildingTypes from '../componenets/types/BuildTypes'
-import TypesHome from '../componenets/types-home/typesHome'
-import TypesOfBeton from './typesofBeton/typesOfbeton'
-// import typesHome from './types-home/typesHome'
+import MoreInformation from './albom/MoreInformation'
+// import Albom from './albom/Albom'
+
+
 
 
 
@@ -20,11 +21,10 @@ function Main() {
   return (
     <div>
       <Header/>
-      <TypesOfBeton/>
-      <TypesHome/>
+
       <BuildingTypes/>
       <Technology/>
-      <UsefulLinks/>
+      {/* <UsefulLinks/> */}
       <CardContainer/>
       <ContactForm/>
       <AboutService/>
