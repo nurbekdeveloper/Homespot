@@ -48,18 +48,24 @@ const cardData = [
 
 const CardContainer = () => {
     return (
-        <div className="card-container">
-            {cardData.map((card, index) => (
-                <Card
-                    key={index}
-                    image={card.image}
-                    title={card.title}
-                    technology={card.technology}
-                    dimensions={card.dimensions}
-                    price={card.price}
-                />
-            ))}
+        <div>
+             <h2 className='title'>Наши готовые Проекты</h2>
+            <p>Посмотрите галерею наших завершенных проектов, чтобы вдохновиться и выбрать то, что подходит именно вам</p>
+             <div className="card-container">
+
+{cardData.map((card, index) => (
+    <Card
+        key={index}
+        image={card.image}
+        title={card.title}
+        technology={card.technology}
+        dimensions={card.dimensions}
+        price={card.price}
+    />
+))}
+</div>
         </div>
+
     );
 };
 

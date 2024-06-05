@@ -17,6 +17,10 @@
 }
 
 
+.title-welcome{
+  font-size: 20px;
+  padding: 8px;
+}
 .badge {
   position: absolute;
   top: 10px;

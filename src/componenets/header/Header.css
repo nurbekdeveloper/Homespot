@@ -10,6 +10,11 @@
 
   color: white;
 }
+
+.welcome-title{
+  margin-top: 180px ;
+  font-size: 25px;
+}
 .header h3 {
   margin-top: 140px;
 }

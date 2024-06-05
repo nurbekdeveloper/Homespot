@@ -20,11 +20,13 @@ const Tree = () => {
       <div className="advantages-content">
         <h2>Наши преимущества</h2>
         <div className="advantages-list">
-          <AdvantageItem number="1" title="Ассортимент" description="Дополнения из самых разных пород древесины." />
-          <AdvantageItem number="2" title="Точность" description="Автоматизированное производство исключает ошибки в конструкции." />
-          <AdvantageItem number="3" title="Доступность" description="Приемлемые цены и прозрачная оплата." />
-          <AdvantageItem number="4" title="Коммуникация" description="Обеспечиваем возможность общения со участниками процесса напрямую." />
-          <AdvantageItem number="5" title="Гарантия" description="Гарантируем высокое качество всех выполненных работ." />
+          <AdvantageItem number="1" title="Опыт и профессионализм" description=": Более 15 лет успешной работы в строительной отрасли." />
+          <AdvantageItem number="2" title="Индивидуальный подход" description="Учет всех ваших пожеланий и потребностей на каждом этапе строительства." />
+          <AdvantageItem number="3" title="Высокие стандарты качества" description="Использование передовых технологий и экологически чистых материалов." />
+
+          <AdvantageItem number="4" title="Комплексный подход" description="Выполнение всех работ под ключ, от проектирования до финальной отделки." />
+          <AdvantageItem number="5" title="Клиент-ориентированность" description="Мы всегда учитываем ваши пожелания и стремимся превзойти ваши ожидания." />
+          <AdvantageItem number="6" title="Энергоэффективность и экологичность" description="Строительство домов с минимальным воздействием на окружающую среду и низкими эксплуатационными расходами." />
         </div>
       </div>
       <div className="tree-container">
