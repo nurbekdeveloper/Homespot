@@ -11,9 +11,9 @@ import { useNavigate } from 'react-router-dom';
 
 const buildingTypes = [
     { image: houseImg, count: 358, title: 'Дома' , url:'/home' },
-    { image: bathImg, count: 178, title: 'Бани',  url:'/baths'},
-    { image: garageImg, count: 152, title: 'Гаражи' , url:'/garages'},
-    { image: shedImg, count: 152, title: 'Навесы', url:'/awnings' },
+    { image: bathImg, count: 178, title: 'Тини хаус',  url:'/baths'},
+    { image: garageImg, count: 152, title: 'Бани' , url:'/garages'},
+    { image: shedImg, count: 152, title: 'Гаражи/Навесы', url:'/awnings' },
     { image: commercialImg, count: 205, title: 'Комм. объекты', url:'/communal-objects' },
 ];
 

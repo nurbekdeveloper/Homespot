@@ -73,9 +73,14 @@ const Navbar = () => {
       <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >
         <div className='nav_item'>
           <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Домов</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Бани</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Гаражи</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Гаражи</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Тини хаус</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Бани</Link></div>
+
+        </div>
+        <div className='nav_item'>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Гаражи/Навесы</Link></div>
+          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Комм. объекты</Link></div>
+
 
 
 

@@ -8,6 +8,7 @@ import mainImg from "../../Assets/maincrouselimg.png";
 import carousel1 from "../../Assets/2carousel.png";
 import carousel2 from "../../Assets/2carousel.png";
 import vector from '../../Assets/Vector.png'
+import CardContainer from "../../componenets/project/CardContainer";
 function MoreInformation() {
 
 
@@ -192,7 +193,8 @@ function MoreInformation() {
         </div>
       </div>
     </div>
-          <ContactForm/>
+    <CardContainer/>
+    <ContactForm/>
     </div>
   );
 }

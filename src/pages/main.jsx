@@ -25,16 +25,17 @@ function Main() {
       <Header/>
 
       <BuildingTypes/>
-
+      <Tree/>
       {/* <UsefulLinks/> */}
       <AboutService/>
+
       <CardContainer/>
       <ClientOpinion/>
 
       <ContactForm/>
       <Technology/>
 
-      <Tree/>
+
       <Partner/>
       <FaqQuestion/>
 

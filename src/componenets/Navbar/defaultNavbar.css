@@ -38,6 +38,7 @@
     }
     .navbar_logo img{
         width: 200px;
+        padding-top: 15px;
     }
     .navbar #dropdown{
         margin: 0;
