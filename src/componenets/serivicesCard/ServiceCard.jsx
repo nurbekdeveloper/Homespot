@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './ServiceCard.css';
-import Modals from '../appliacation/Modal';
+
 import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ image, title, url }) => {
@@ -8,7 +8,7 @@ const ServiceCard = ({ image, title, url }) => {
     const navigate = useNavigate()
     return (
         <div className="foundation-card" onClick={()=>navigate('/services'+ url)}>
-      
+
             <img src={image} alt={title} className="foundation-card-image" />
             <h2>{title}</h2>
         </div>
