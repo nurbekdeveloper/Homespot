@@ -5,7 +5,7 @@ import Partner from '../../componenets/partneer/Partner'
 
 import "./contact.css"
 import AboutService from '../../componenets/ourserves/AboutService'
-import ContactForm from '../../componenets/form/ContactForm'
+
 
 function Contact() {
   useEffect(() => {
@@ -18,15 +18,15 @@ function Contact() {
             <div className="contact-info">
                 <div className="contact-item">
                     <i className="fa fa-map-marker"></i>
-                    <p>1st Floor, Vincent Plaza,<br /> Kuzhithurai, Tamilnadu - 629 163</p>
+                    <p>г. Владимир, Большая,<br /> Нижегородская улица, 27</p>
                 </div>
                 <div className="contact-item">
                     <i className="fa fa-envelope"></i>
-                    <p>sales@smarteyeapps.com<br />support@smarteyeapps.com</p>
+                    <p>info@swedstandard.ru</p>
                 </div>
                 <div className="contact-item">
                     <i className="fa fa-phone"></i>
-                    <p>+912 344 43434 443<br />+041 3434 44343 43</p>
+                    <p>+7(920) 926 07 07</p>
                 </div>
             </div>
             <div className="contact-form-map">
@@ -41,14 +41,7 @@ function Contact() {
                     </form>
                 </div>
                 <div className="contact-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126742.82431012034!2d77.46854343155663!3d8.178191542003582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b056dfdc76e757d%3A0x621dd4b8fd72f0e2!2sKuzhithurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1620282106887!5m2!1sen!2sin"
-                        width="100%"
-                        height="450"
-                        style={{ border: 0 }}
-                        allowFullScreen=""
-                        loading="lazy">
-                    </iframe>
+                <iframe src="https://yandex.uz/map-widget/v1/?ll=40.470595%2C56.146894&mode=whatshere&whatshere%5Bpoint%5D=40.426434%2C56.136111&whatshere%5Bzoom%5D=17&z=13.1" width="560" height="400" frameborder="1" allowfullscreen="true" ></iframe>
                 </div>
             </div>
         </div>

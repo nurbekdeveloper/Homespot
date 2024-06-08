@@ -69,6 +69,7 @@ const Navbar = () => {
 
         <p>+7 <span> (123) 456-7890</span></p>
       </a>
+      <button>ОСТАВИТЬ ЗАЯВКУ</button>
       </div>
       <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >
         <div className='nav_item'>
