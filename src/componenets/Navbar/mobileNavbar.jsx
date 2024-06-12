@@ -31,6 +31,7 @@ const Resnav = () => {
 
                 <p>+998 94 <span>210-74-47</span></p>
             </a>
+            <button>ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
         <div className={`second-nav ${(secondnav && firstnav) ? "" : "close"}`}>
         <div className='sec-nav-mebel' onClick={()=>setSecondnav(false)}><div><GrPrevious/></div><div>Мебель</div></div>

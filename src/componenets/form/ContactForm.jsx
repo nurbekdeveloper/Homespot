@@ -1,33 +1,125 @@
-// src/ContactForm.js
-import React from 'react';
-import './ContactForm.css';
 
-function  ContactForm  () {
+
+import './ContactForm.css';
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+
+function ContactForm() {
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    attachment: null,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "attachment") {
+      setFormData({
+        ...formData,
+        attachment: files[0],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('message', formData.message);
+    if (formData.attachment) {
+      formDataToSend.append('attachment', formData.attachment);
+    }
+
+    emailjs.sendForm(
+      'service_1h1wy3c', // Replace with your service ID
+      'template_k2emazw', // Replace with your template ID
+      e.target,
+      'QZV_l_vLAqERc79MY' // Replace with your user ID
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Сообщение отправлено!');
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Ошибка при отправке сообщения.');
+      });
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      attachment: null,
+    });
+  };
+
   return (
     <div className="all">
-      <form className="form">
-        <input type="text" placeholder="Имя" className="input" />
-        <input type="email" placeholder="Электронная почта" className="input" />
-        <input type="tel" placeholder="Телефон" className="input" />
-        <textarea placeholder="Сообщение" rows="4" className="textarea" />
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Имя"
+          className="input"
+          value={formData.name}
+          onChange={handleChange}
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Электронная почта"
+          className="input"
+          value={formData.email}
+          onChange={handleChange}
+        />
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Телефон"
+          className="input"
+          value={formData.phone}
+          onChange={handleChange}
+        />
+        <textarea
+          name="message"
+          placeholder="Сообщение"
+          rows="4"
+          className="textarea"
+          value={formData.message}
+          onChange={handleChange}
+        />
         <div className="attachment">
-          <label htmlFor="file-upload" className="custom-file-upload">
-            + Прикрепить файлы
-          </label>
-          <input id="file-upload" type="file" className="file-input" />
+
+          <input
+            id="file-upload"
+            type="file"
+            name="attachment"
+            className="file-input"
+            onChange={handleChange}
+          />
         </div>
         <button type="submit" className="buttonForm">Отправить</button>
       </form>
-      <div className="description" >
+      <div className="description">
         <h2>Расчёт стоимости по вашему проекту</h2>
-        <p  style={{color:'white'}}>
-
-Сделайте первый шаг к своей мечте! Обращайтесь к нам для расчета стоимости вашего проекта и получите качественную архитектурную концепцию, которая приведет ваши идеи к реализации.
+        <p style={{ color: 'white' }}>
+          Сделайте первый шаг к своей мечте! Обращайтесь к нам для расчета стоимости вашего проекта и получите качественную архитектурную концепцию, которая приведет ваши идеи к реализации.
         </p>
-
       </div>
     </div>
   );
-};
+}
 
 export default ContactForm;

@@ -1,6 +1,8 @@
 // src/components/FAQ.js
 
 import React, { useState } from 'react';
+
+import emailjs from 'emailjs-com';
 import './FaqQuestion.css';
 
 const FaqQuestion = () => {
@@ -8,6 +10,21 @@ const FaqQuestion = () => {
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm( 'service_1h1wy3c', 'template_k2emazw', e.target, 'QZV_l_vLAqERc79MY')
+      .then((result) => {
+        console.log(result.text);
+        alert('Сообщение отправлено!');
+      }, (error) => {
+        console.log(error.text);
+        alert('Ошибка при отправке сообщения.');
+      });
+
+    e.target.reset();
   };
 
   return (
@@ -41,13 +58,12 @@ const FaqQuestion = () => {
         {activeIndex === 4 && <div className="faq-answer">Ответ на вопрос 4</div>}
       </div>
       <div className="contact-form">
-      
-        <form>
-          <input type="text" placeholder="Имя" required />
-          <input type="email" placeholder="Электронная почта" required />
-          <input type="tel" placeholder="Телефон" />
-          <textarea placeholder="Сообщение" required></textarea>
-          <input type="file" />
+        <form onSubmit={sendEmail}>
+          <input type="text" name="name" placeholder="Имя" required />
+          <input type="email" name="email" placeholder="Электронная почта" required />
+          <input type="tel" name="phone" placeholder="Телефон" />
+          <textarea name="message" placeholder="Сообщение" required></textarea>
+
           <button type="submit">Отправить</button>
         </form>
       </div>

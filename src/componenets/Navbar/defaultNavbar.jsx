@@ -2,18 +2,10 @@ import React, {  useEffect, useState } from 'react'
 
 //style
 import "./defaultNavbar.css"
-
-//icons
 import  {BsChevronDown} from "react-icons/bs"
-
-//assets
 import logo from "../../Assets/Logo.png"
-import call from "../../Assets/Logo.png"
-
 //router
 import { Link,useLocation } from 'react-router-dom'
-
-
 
 const Navbar = () => {
 
