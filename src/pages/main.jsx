@@ -11,6 +11,7 @@ import FaqQuestion from '../componenets/faqquestion/FaqQuestion'
 import CardContainer from '../componenets/project/CardContainer'
 import BuildingTypes from '../componenets/types/BuildTypes'
 import ClientOpinion from './ClientOpinion/ClientOpinion'
+import OurservesTwopage from './ourservestwopage/OurservesTwopage'
 // import MoreInformation from './albom/MoreInformation'
 
 
@@ -23,12 +24,11 @@ function Main() {
   return (
     <div>
       <Header/>
-
+      <OurservesTwopage/>
       <BuildingTypes/>
       <Tree/>
       {/* <UsefulLinks/> */}
       <AboutService/>
-
       <CardContainer/>
       <ClientOpinion/>
 

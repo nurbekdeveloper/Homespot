@@ -1,0 +1,36 @@
+/* src/Garage.css */
+.garage-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.text-section {
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .garage-container {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .text-section {
+    max-width: 50%;
+    margin-right: 20px;
+  }
+
+  .image-section {
+    max-width: 50%;
+  }
+}
