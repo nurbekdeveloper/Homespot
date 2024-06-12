@@ -93,7 +93,7 @@ export default function App() {
               </svg>
               TW Elements
             </h6>
-            <p>
+            <p >
               Here you can use rows and columns to organize your footer
               content. Lorem ipsum dolor sit amet, consectetur adipisicing
               elit.
