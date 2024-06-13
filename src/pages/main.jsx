@@ -35,8 +35,7 @@ function Main() {
       <Technology/>
 
 
-      <Partner/>
-      <FaqQuestion/>
+
 
     </div>
   )

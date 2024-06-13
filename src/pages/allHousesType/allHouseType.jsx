@@ -101,7 +101,7 @@ const AllHouseType= () => {
     </div>
 
    <CardContainer/>
-    <FaqQuestion/>
+
 
 
     </div>
