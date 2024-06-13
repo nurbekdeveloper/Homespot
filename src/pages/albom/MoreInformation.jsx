@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./MoreInformation.css";
 import ContactForm from "../../componenets/form/ContactForm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+  import   uploadedImage  from '../../Assets/005.jpg'
 
 import mainImg from "../../Assets/maincrouselimg.png";
 import carousel1 from "../../Assets/2carousel.png";
@@ -90,20 +90,16 @@ function MoreInformation() {
               <span className="value">Дом</span>
             </div>
             <div className="detail-item">
-              <span className="label">Стиль</span>
-              <span className="value">Скандинавский</span>
-            </div>
-            <div className="detail-item">
               <span className="label">Технология</span>
-              <span className="value">Клееный брус</span>
+              <span className="value">Газобетон</span>
             </div>
             <div className="detail-item">
               <span className="label">Габаритные размеры</span>
-              <span className="value">100x100x100</span>
+              <span className="value">9x9,7</span>
             </div>
             <div className="detail-item">
               <span className="label">Общая площадь</span>
-              <span className="value">150 м²</span>
+              <span className="value">149.4 м²</span>
             </div>
             <div className="detail-item">
               <span className="label">Этажность</span>
@@ -122,31 +118,14 @@ function MoreInformation() {
         </div>
       </div>
       <div className="project-description-container">
-      <div className="project-header">
-        <h1>Описание проекта</h1>
-        <p>
-          Собственный деревянный дом — это жильё, в котором всё создано с
-          учётом наших потребностей и предпочтений. Частный водозабор,
-          возможность самостоятельного производства тепла при наличии
-          имеющихся дополнительных источников (печь, гелио и иные новейшие
-          технологии и разработки в области ветряных электростанций и
-          биогаза) — всё это даёт реальную независимость и экономию денег.
-        </p>
-        <p>
-          А ещё дом из дерева — это экологическая безопасность, долговечность,
-          положительный внешний вид и необъяснимое очарование. Только
-          представьте, как приятно обитать на собственной территории! Можно
-          прогуливаться по саду, подуть в зимние игры, покататься, играть
-          вместе, приятно пошататься всему в главная.
-        </p>
-      </div>
+
 
       <div className="info-container">
             <h2 className="info-title">Общая информация</h2>
             <div className="info-columns">
                 <div className="info-column">
                     <div className="info-item">
-                        <span className="info-label">Страна</span>
+                        <span className="info-label">	Фундамент</span>
                         <span className="info-dots"></span>
                         <span className="info-value">Россия</span>
                     </div>
@@ -180,7 +159,30 @@ function MoreInformation() {
                 </div>
             </div>
         </div>
-
+        <div className="wrap-all">
+      <div className="text-content">
+        <h1>Что входит в стоимость</h1>
+        <h2 >5 лет гарантии</h2>
+        <p>
+          Мы предоставляем 5-летнюю гарантию на все наши работы, чтобы вы могли быть уверены в их качестве и надежности.
+        </p>
+        <h2>Персональный менеджер</h2>
+        <p>
+          Каждому клиенту предоставляется персональный менеджер, который будет на связи и поможет решить любые вопросы и задачи на протяжении всего проекта.
+        </p>
+        <h2>Сопровождение заказчика</h2>
+        <p>
+          Наши специалисты обеспечат полное сопровождение заказчика на всех этапах строительства, начиная от проектирования и заканчивая финальной отделкой.
+        </p>
+        <h2>Технический надзор</h2>
+        <p>
+          Мы осуществляем тщательный технический надзор на всех этапах строительства, чтобы гарантировать соответствие всех работ высоким стандартам качества.
+        </p>
+      </div>
+      <div className="image-content">
+        <img src={uploadedImage} alt="Example" />
+      </div>
+    </div>
       <div className="additional-info">
         <h2>Дополнительная информация</h2>
         <div className="additional-info-grid">

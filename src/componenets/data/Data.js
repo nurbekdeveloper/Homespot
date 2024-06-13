@@ -2,9 +2,9 @@ import fundament from "../../Assets/beton.webp"
 
 // homepage img
 
-import house1 from '../../Assets/useful24.png';
-import house2 from '../../Assets/useful24.png';
-import house3 from '../../Assets/useful24.png';
+import house1 from '../../Assets/house1.jpg';
+import house2 from '../../Assets/house2.jpg';
+import house3 from '../../Assets/house3.jpg';
 
 // Card data img
 

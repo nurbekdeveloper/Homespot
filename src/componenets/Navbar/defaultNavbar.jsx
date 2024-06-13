@@ -6,9 +6,14 @@ import  {BsChevronDown} from "react-icons/bs"
 import logo from "../../Assets/Logo.png"
 //router
 import { Link,useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeModal } from '../../pages/redux/slice/modal.slice'
 
 const Navbar = () => {
 
+
+
+  const dispatch = useDispatch()
   const [show, setShow] = useState(false)
   const controlNavbar = () => {
       if (window.scrollY > 250 ) {
@@ -49,8 +54,8 @@ const Navbar = () => {
 
       <div className='navbar_nav'>
       <Link to={"/"} onClick={hideDropdown} className={`${(pathname === "/") ? "active" : "navbar_link"}`}>Главная  </Link>
-        <Link id='dropdown' to={"/construction"} onClick={()=>setDropDown(prev=>!prev)} className={`${(pathname === "construction") ? "active" : "navbar_link"}`} > Строительство  &nbsp; <BsChevronDown/></Link>
-        <Link id='dropdown' to={"/services"}  onClick={()=>setDropDown2(prev=>!prev)}  className={`${(pathname === "/about") ? "active" : "navbar_link"}`}>Наши Услуги   &nbsp; <BsChevronDown/></Link>
+        <Link id='dropdown' to={"/construction"} className={`${(pathname === "construction") ? "active" : "navbar_link"}`} > Строительство  &nbsp; <i  onClick={()=>setDropDown(prev=>!prev)}><BsChevronDown/></i> </Link>
+        <Link id='dropdown' to={"/services"}   className={`${(pathname === "/about") ? "active" : "navbar_link"}`}>Наши Услуги   &nbsp; <i onClick={()=>setDropDown2(prev=>!prev)} ><BsChevronDown/></i></Link>
         <Link to={"/design"} onClick={hideDropdown} className={`${(pathname === "/design") ? "active" : "navbar_link"}`}>Проектирование </Link>
         <Link to={"/about"} onClick={hideDropdown} className={`${(pathname === "/sevices") ? "active" : "navbar_link"}`}>  О Нас </Link>
         <Link to={"/project"} onClick={hideDropdown} className={`${(pathname === "/project") ? "active" : "navbar_link"}`}> Наши работы </Link>
@@ -59,20 +64,20 @@ const Navbar = () => {
 
       <a href='tel:+998712357447' className='navbar_phone'>
 
-        <p>+7 <span> (123) 456-7890</span></p>
+        <p>+7 <span> (920) 926 07 07</span></p>
       </a>
-      <button>ОСТАВИТЬ ЗАЯВКУ</button>
+      <button onClick={()=>dispatch(changeModal(true))}>ОСТАВИТЬ ЗАЯВКУ</button>
       </div>
       <div className={ `dropdown ${dropdown ? 'open' : ""}`}  >
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Домов</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Тини хаус</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Бани</Link></div>
+          <div className='nav_item_link'><Link to={"/construction/home"}  onClick={changeSlug} >Домов</Link></div>
+          <div className='nav_item_link'><Link to={"construction/awnings"}  onClick={changeSlug} >Тини хаус</Link></div>
+          <div className='nav_item_link'><Link to={"/construction/baths"}  onClick={changeSlug} >Бани</Link></div>
 
         </div>
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Гаражи/Навесы</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Комм. объекты</Link></div>
+          <div className='nav_item_link'><Link to={"/construction/garages"}  onClick={changeSlug} >Гаражи/Навесы</Link></div>
+          <div className='nav_item_link'><Link to={"/construction/communal-objects"}  onClick={changeSlug} >Комм. объекты</Link></div>
 
 
 

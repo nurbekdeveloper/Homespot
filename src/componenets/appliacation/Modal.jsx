@@ -1,9 +1,73 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './modal.css';
-import quoteImage from '../../Assets/person.png'; // Update the path to your image file
+import quoteImage from '../../Assets/person.png';
 import { Button, Modal } from 'antd';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeModal } from '../../pages/redux/slice/modal.slice';
+import emailjs from 'emailjs-com';
+
 const Modals = (props) => {
-  const {open,setModal2Open} = props
+  const { modal } = useSelector(state => state.modal);
+  const dispatch = useDispatch();
+
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+    attachment: null,
+  });
+
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "attachment") {
+      setFormData({
+        ...formData,
+        attachment: files[0],
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formDataToSend = new FormData();
+    formDataToSend.append('name', formData.name);
+    formDataToSend.append('email', formData.email);
+    formDataToSend.append('phone', formData.phone);
+    formDataToSend.append('message', formData.message);
+    if (formData.attachment) {
+      formDataToSend.append('attachment', formData.attachment);
+    }
+
+    emailjs.sendForm(
+      'service_1h1wy3c', // Replace with your service ID
+      'template_k2emazw', // Replace with your template ID
+      e.target,
+      'QZV_l_vLAqERc79MY' // Replace with your user ID
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        alert('Сообщение отправлено!');
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        alert('Ошибка при отправке сообщения.');
+      });
+
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      message: '',
+      attachment: null,
+    });
+  };
 
   return (
     <>
@@ -11,34 +75,64 @@ const Modals = (props) => {
         title="Vertically centered modal dialog"
         width={1000}
         centered
-        open={open}
-        onOk={() => setModal2Open(false)}
-        onCancel={() => setModal2Open(false)}
+        open={modal}
+        onOk={() => dispatch(changeModal(false))}
+        onCancel={() => dispatch(changeModal(false))}
       >
         <div className="quote-section">
-      <div className="quote-form">
-        <input type="text" placeholder="Имя" className="quote-input" />
-        <input type="email" placeholder="Электронная почта" className="quote-input" />
-        <input type="tel" placeholder="Телефон" className="quote-input" />
-        <textarea placeholder="Сообщение" className="quote-textarea"></textarea>
-        <div className="quote-attach">
-          <span>+ Прикрепить файлы</span>
+          <form className="quote-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Имя"
+              className="quote-input"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Электронная почта"
+              className="quote-input"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Телефон"
+              className="quote-input"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Сообщение"
+              className="quote-textarea"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+            <div className="quote-attach">
+
+
+            </div>
+            <button type="submit" className="quote-button">Отправить</button>
+            <div className="quote-icons">
+              <span>📧</span>
+              <span>📱</span>
+              <span>📞</span>
+            </div>
+          </form>
+          <div className="quote-image">
+            <img src={quoteImage} alt="Project Quote" />
+          </div>
         </div>
-        <button className="quote-button" onClick={() => setModal2Open(false)}>Отправить</button>
-        <div className="quote-icons">
-          <span>📧</span>
-          <span>📱</span>
-          <span>📞</span>
-        </div>
-      </div>
-      <div className="quote-image">
-        <img src={quoteImage} alt="Project Quote" />
-      </div>
-    </div>
       </Modal>
-  
-    
-      </>
+    </>
   );
 };
 

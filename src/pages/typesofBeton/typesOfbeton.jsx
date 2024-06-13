@@ -2,13 +2,14 @@ import React from 'react';
 import './typesOfbeton.css';
 import { foundations } from '../../componenets/data/foundation.db';
 
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import CardContainer from '../../componenets/project/CardContainer';
 import ContactForm from '../../componenets/form/ContactForm';
 
-const FoundationCard = ({ title, price, description, imageUrl }) => {
+const FoundationCard = ({ title, price, description, imageUrl,nickname }) => {
+  const navigate = useNavigate()
   return (
-    <div className="foundation-card">
+    <div className="foundation-card" onClick={()=>navigate(`/services/data/${nickname}`)}>
       <img src={imageUrl} alt={title} className="foundation-image" />
       <div className="foundation-content">
         <h2>{title}</h2>
@@ -36,6 +37,7 @@ const TypesOfBeton = () => {
         {filterFoundation.map((foundation, index) => (
           <FoundationCard
             key={index}
+            nickname={foundation.nicname}
             title={foundation.title}
             price={foundation.price}
             description={foundation.description}

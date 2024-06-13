@@ -6,7 +6,7 @@
     justify-content: space-around;
     background-color: #8bc34a;
   }
-  
+
   .quote-form {
     background: #fff;
     padding: 2em;
@@ -16,7 +16,7 @@
     max-width: 400px;
     margin-bottom: 2em;
   }
-  
+
   .quote-input,
   .quote-textarea {
     width: 100%;
@@ -25,18 +25,18 @@
     border: 1px solid #ddd;
     border-radius: 4px;
   }
-  
+
   .quote-textarea {
     height: 100px;
     resize: none;
   }
-  
+
   .quote-attach {
     color: #8bc34a;
     cursor: pointer;
     margin-bottom: 1em;
   }
-  
+
   .quote-button {
     background-color: #8bc34a;
     color: #fff;
@@ -47,46 +47,46 @@
     cursor: pointer;
     font-size: 1em;
   }
-  
+
   .quote-button:hover {
     background-color: #7cb342;
   }
-  
+
   .quote-icons {
     display: flex;
     justify-content: space-around;
     margin-top: 1em;
   }
-  
+
   .quote-icons span {
     font-size: 1.5em;
     cursor: pointer;
   }
   .quote-image{
-    width: 100%;
+    max-width: 600px ;
+   height: auto;
   }
   .quote-image img {
     width: 100%;
     height: 500px;
     max-width: 800px;
-    
+
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
+
   @media (min-width: 768px) {
     .quote-section {
       flex-direction: row;
       justify-content: space-between;
     }
-  
+
     .quote-form {
       width: 45%;
       margin-bottom: 0;
     }
-  
+
     .quote-image {
       width: 45%;
     }
   }
-  

@@ -1,18 +1,68 @@
 // src/HouseGrid.js
 import React, { useEffect } from 'react';
-import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
+import houseImage from '../../Assets/houses.png';
+import house001 from '../../Assets/001.jpg';
+import house002 from '../../Assets/002.jpg';
+
+import house003 from '../../Assets/003.jpg';
+import house004 from '../../Assets/004.jpg';
+import house005 from '../../Assets/005.jpg';
+import house006 from '../../Assets/006.jpg';
+// Ensure the images are in the src folder
+
 import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
 import CardContainer from '../../componenets/project/CardContainer';
 import { useNavigate } from 'react-router-dom';
 const houses = [
-  { id: 1, name: "Glass House 25A", type: "Баня", technology: "Клееный брус", dimensions: "100x100x100", price: "1 000 000 Р", image: houseImage },
-  { id: 2, name: "Kontio Laaksolahti", image: houseImage , url:'kontio-laaksolahti' },
-  { id: 3, name: "Г-69", image: houseImage  , url :'g-69'},
-  { id: 4, name: "Н-49", image: houseImage ,  url:'h-64'},
-  { id: 5, name: "База отдыха сибирь", image: houseImage,  url:'sibir-dam-olish-markazi' },
-  { id: 6, name: "Glass House 25A", image: houseImage ,url :'glass-house-25'  },
-  { id: 7, name: "Kontio Laaksolahti", image: houseImage , url : 'kontio-laaksolahti' },
-  { id: 8, name: "Г-69", image: houseImage ,  url :'g-69 '},
+  { id: 1,
+     name: "Glass House 25A",
+      type: "Баня",
+      technology: "Клееный брус",
+      dimensions: "100x100x100",
+      price: "1 000 000 Р",
+      image: house001 },
+  {
+    id: 2,
+    name: "Kontio Laaksolahti",
+    image: house002 ,
+    url:'kontio-laaksolahti'
+  },
+  {
+    id: 3,
+    name: "Г-69",
+    image: house003  ,
+     url :'g-69'
+  },
+  {
+     id: 4,
+      name: "Н-49",
+       image: house004 ,
+         url:'h-64'
+    },
+  {
+    id: 5,
+     name: "База отдыха сибирь",
+      image: house005,
+      url:'sibir-dam-olish-markazi'
+   },
+
+  { id: 6,
+     name: "Glass House 25A",
+     image: houseImage ,
+     img1 :house006,
+     url :'glass-house-25'
+    },
+
+  { id: 7,
+    name: "Kontio Laaksolahti",
+     image: houseImage ,
+     url : 'kontio-laaksolahti'
+    },
+  {
+    id: 8,
+    name: "Г-69",
+     image: houseImage ,
+     url :'g-69 '},
 ];
 const AllHouseType= () => {
   const navigate = useNavigate()

@@ -1,0 +1,81 @@
+/* src/ContactForm.css */
+
+.contact-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.contact-form-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form-image img {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form-content {
+  flex: 2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.contact-form-content h2 {
+  margin-top: 0;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="tel"] {
+  width: calc(100% - 20px);
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group.form-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.form-group.form-checkbox input {
+  margin-right: 10px;
+}
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    flex-direction: column;
+  }
+
+  .contact-form-image,
+  .contact-form-content {
+    flex: 1 100%;
+  }
+}
