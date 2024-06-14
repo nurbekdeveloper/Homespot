@@ -55,6 +55,9 @@ const OurservesTwopage = () => {
         <p className="uniqueText">
          {dataBeton.descriptionEnd}
         </p>
+        <p>{dataBeton.description3}</p>
+        <p>{dataBeton.description4}</p>
+        <p>{dataBeton.description5}</p>
       </main>
     </div>
 

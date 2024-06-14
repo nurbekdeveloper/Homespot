@@ -22,11 +22,10 @@
 }
 .foundation-card-image {
   width: 100%;
-  max-width: 500px;
-  max-height:500px ;
-
+  max-width: 600px;
+  height: 300px ;
   padding: 10px;
-  height: auto;
+
 }
 
 .foundation-card-content {
