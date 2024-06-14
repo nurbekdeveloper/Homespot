@@ -1,6 +1,6 @@
 import React from 'react'
 import './OurservesTwopage.css'
-import  houseImage from '../../Assets/houses.png'
+
 import { useParams } from 'react-router-dom'
 import { foundations } from '../../componenets/data/foundation.db';
 
@@ -12,11 +12,12 @@ const OurservesTwopage = () => {
   return (
     <div>
 
+<div>
 <div className="garage-container">
       <div className="text-section">
         <h1>{dataBeton?.title} / {dataBeton?.nicname}</h1>
         <p>
-          <strong>Собственный деревянный дом</strong> — это жильё, в котором всё сделано с учётом личных потребностей и предпочтений. Чистый воздух, возможность самостоятельного планирования участка (при желании можно дополнительно возвести баню, гараж, навес и иное необходимое сооружение) и возможность выращивания овощей и фруктов — всё это вы получаете в частном доме.
+        {dataBeton.maindescription}
         </p>
         <p>
          {dataBeton?.description}
@@ -27,6 +28,38 @@ const OurservesTwopage = () => {
       </div>
     </div>
     </div>
+
+    <div className="uniqueContainer">
+      <header className="uniqueHeader">
+        <h1 className="uniqueTitle">{dataBeton?.title}</h1>
+      </header>
+      <main className="uniqueContent">
+        <p className="uniqueText">
+         {dataBeton.description2}
+        </p>
+        <h2 className="uniqueSubtitle"><b>{dataBeton.titleDescription}</b></h2>
+        <ul className="uniqueList">
+          <li className="uniqueListItem">
+            {dataBeton.list1}
+          </li>
+          <li className="uniqueListItem">
+          {dataBeton.list2}
+          </li>
+          <li className="uniqueListItem">
+          {dataBeton.list3}
+          </li>
+          <li className="uniqueListItem">
+          {dataBeton.list4}
+          </li>
+        </ul>
+        <p className="uniqueText">
+         {dataBeton.descriptionEnd}
+        </p>
+      </main>
+    </div>
+
+
+</div>
   )
 }
 
