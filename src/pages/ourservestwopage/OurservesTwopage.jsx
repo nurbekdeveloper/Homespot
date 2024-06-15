@@ -15,7 +15,7 @@ const OurservesTwopage = () => {
 <div>
 <div className="garage-container">
       <div className="text-section">
-        <h1>{dataBeton?.title} / {dataBeton?.nicname}</h1>
+        <h1>{dataBeton?.title} </h1>
         <p>
         {dataBeton.maindescription}
         </p>
