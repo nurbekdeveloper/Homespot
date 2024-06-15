@@ -1,29 +1,31 @@
 import React from 'react';
 import './ClientOpinion.css';
-import house1 from '../../Assets/useful4.png';
+import otziv3 from '../../Assets/otziv3.jpg';
+import otziv1 from '../../Assets/otziv1.jpg';
+import otziv2 from '../../Assets/otiziv2.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 const cards = [
   {
     id: 1,
-    image: house1,
-    title: '',
-    description: 'Легкость Теплоизоляция Звукоизоляция, Простота обработки Экологичность:',
+    image: otziv1,
+    title: 'Иван Петров',
+    description: 'Отличная работа! Строительство дома прошло быстро и качественно. Очень доволен результатом."',
     link: 's#'
   },
   {
     id: 2,
-    image: house1,
-    title: 'Дом без бани — не дом. 5 образцовых...',
-    description: 'Банные процедуры — это ни с чем не сравнимое удовольствие...',
+    image: otziv2,
+    title: 'Алексей Иванов',
+    description: 'Проектирование и строительство коттеджа прошло на высшем уровне. Приятно работать с такими профессионалами.',
     link: 's#'
   },
   {
     id: 3,
-    image: house1,
-    title: 'Эстетика пляжного дома',
-    description: 'Дом из клееного бруса Вояжа 50 м2',
+    image: otziv3,
+    title: 'Ольга Смирнова',
+    description: ' "Благодарю за капитальный ремонт. Качество работ на высоте, буду обращаться снова!"',
     link: 's#'
   }
 ];
@@ -44,7 +46,7 @@ const ClientOpinion = () => {
                 <p className="client-opinion-date">{card.date}</p>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-                <a href={card.link} className="client-opinion-read-more">Читать далее</a>
+
               </div>
             </div>
           ))}

@@ -63,7 +63,7 @@ const House= (url) => {
       <button className="filter-button">Расширенный фильтр</button>
     </div>
 
-    <FaqQuestion/>
+
 
 
     </div>
