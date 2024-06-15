@@ -39,7 +39,7 @@ const TypesOfBeton = () => {
             key={index}
             nickname={foundation.nicname}
             title={foundation.title}
-            price={foundation.price}
+
             description={foundation.description}
             imageUrl={foundation.imageUrl}
           />
