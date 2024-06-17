@@ -117,84 +117,66 @@ function MoreInformation() {
           <div className="price">от 15 000 000 ₽</div>
         </div>
       </div>
-      <div className="project-description-container">
+      <div className="construction-page">
+      <header className="construction-header">
+        <h1>Строительные характеристики дома</h1>
+        <ul>
+          <li>Фундамент: Монолитная железобетонная плита, 300 мм, с разводкой канализации и водопровода.</li>
+          <li>Стены: Газобетонные блоки, 375 мм, D400, армирование каждые 3 ряда.</li>
+          <li>Потолки: Высота 3 м.</li>
+          <li>Перегородки: Газобетонные блоки, 100 мм, D500.</li>
+          <li>Перекрытие: Деревянные балки, огне- и биозащитная обработка.</li>
+          <li>Вентиляция: Естественная для кухни и санузлов, подготовка под котел отопления, вывод через вентиляционные шахты.</li>
+          <li>Кровля: Стропильная система, супердиффузионная мембрана Folder, металлочерепица Grand Line 0.5 мм (Ral 8017).</li>
+        </ul>
+      </header>
 
+      <section className="cost-section">
+        <h2>Что входит в стоимость</h2>
+        <ul>
+          <li>5 лет гарантии: Мы предоставляем 5-летнюю гарантию на все наши работы, чтобы вы могли быть уверены в их качестве и надежности.</li>
+          <li>Персональный менеджер: Каждому клиенту предоставляется персональный менеджер, который будет на связи и поможет решить любые вопросы и задачи на протяжении всего проекта.</li>
+          <li>Сопровождение заказчика: Наши специалисты обеспечат полное сопровождение заказчика на всех этапах строительства, начиная от проектирования и заканчивая финальной отделкой.</li>
+          <li>Технический надзор: Мы осуществляем тщательный технический надзор на всех этапах строительства, чтобы гарантировать соответствие всех работ высоким стандартам качества.</li>
+        </ul>
+      </section>
 
-      <div className="info-container">
-            <h2 className="info-title">Общая информация</h2>
-            <div className="info-columns">
-                <div className="info-column">
-                    <div className="info-item">
-                        <span className="info-label">	Фундамент</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">Россия</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-label">Производитель</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">Skobex Technologies</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-label">Сезонность</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">Постоянное проживание</span>
-                    </div>
-                </div>
-                <div className="info-column">
-                    <div className="info-item">
-                        <span className="info-label">Форма здания</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">Квадрат</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-label">Форма кровли</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">Односкатная</span>
-                    </div>
-                    <div className="info-item">
-                        <span className="info-label">Жилая площадь</span>
-                        <span className="info-dots"></span>
-                        <span className="info-value">100 м²</span>
-                    </div>
-                </div>
-            </div>
+      <section className="additional-services">
+        <h2>Дополнительные услуги</h2>
+        <div className="facade-options">
+          <h3>Варианты фасадов</h3>
+          <ul>
+            <li>Облицовочный кирпич</li>
+            <li>Декоративная штукатурка</li>
+            <li>Комбинированная отделка фасада</li>
+          </ul>
+          <p>Стоимость отделки фасада рассчитывается индивидуально и предоставляется по запросу.</p>
         </div>
-        <div className="wrap-all">
-      <div className="text-content">
-        <h1>Что входит в стоимость</h1>
-        <h2 >5 лет гарантии</h2>
-        <p>
-          Мы предоставляем 5-летнюю гарантию на все наши работы, чтобы вы могли быть уверены в их качестве и надежности.
-        </p>
-        <h2>Персональный менеджер</h2>
-        <p>
-          Каждому клиенту предоставляется персональный менеджер, который будет на связи и поможет решить любые вопросы и задачи на протяжении всего проекта.
-        </p>
-        <h2>Сопровождение заказчика</h2>
-        <p>
-          Наши специалисты обеспечат полное сопровождение заказчика на всех этапах строительства, начиная от проектирования и заканчивая финальной отделкой.
-        </p>
-        <h2>Технический надзор</h2>
-        <p>
-          Мы осуществляем тщательный технический надзор на всех этапах строительства, чтобы гарантировать соответствие всех работ высоким стандартам качества.
-        </p>
-      </div>
-      <div className="image-content">
-        <img src={uploadedImage} alt="Example" />
-      </div>
-    </div>
-      <div className="additional-info">
-        <h2>Дополнительная информация</h2>
-        <div className="additional-info-grid">
-          {additionalInfo.map((info, index) => (
-            <div key={index} className="additional-info-item">
-             <img  className="vector" src={vector} alt="" />
-              <span>{info.label}</span>
-            </div>
-          ))}
+
+        <div className="pre-finishing">
+          <h3>Предчистовая отделка дома</h3>
+          <ul>
+            <li>Штукатурка стен</li>
+            <li>Полусухая стяжка пола</li>
+            <li>Электромонтажные работы</li>
+            <li>Установка сантехники</li>
+            <li>Система отопления</li>
+          </ul>
+          <p>Цена на предчистовую отделку начинается от 8 500 ₽/кв.м.</p>
         </div>
-      </div>
+      </section>
+
+      <section className="why-us">
+        <h2>Почему с нами надежно?</h2>
+        <ul>
+          <li>Гарантированная стоимость: Цена строительства остается неизменной после подписания договора. Мы обеспечиваем полную прозрачность и отсутствие скрытых расходов.</li>
+          <li>Профессиональная команда: Наши сотрудники — это высококвалифицированные специалисты, что обеспечивает высокое качество всех выполненных работ.</li>
+          <li>Богатый опыт работы: Шведстандарт имеет более 15 лет опыта в Швеции и более 20 лет в России. Мы успешно работаем на строительном рынке более 10 лет, что позволяет нам решать любые задачи и учитывать все особенности и нюансы отрасли.</li>
+          <li>Оплата поэтапно: Вы оплачиваете только завершенные этапы работ, после их приемки и подписания соответствующих актов.</li>
+        </ul>
+      </section>
     </div>
+
     <CardContainer/>
     <ContactForm/>
     </div>

@@ -37,6 +37,7 @@ margin-top: 20px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-bottom: 200px ;
 }
 
 .carousel-info {
@@ -302,4 +303,43 @@ h1 {
   .image-content {
     margin-top: 20px;
   }
+}
+
+
+.construction-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.construction-header, .cost-section, .additional-services, .why-us {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.construction-header h1,
+.cost-section h2,
+.additional-services h2,
+.why-us h2 {
+  color: #004d40;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+.additional-services div {
+  margin-bottom: 20px;
+}
+
+.additional-services h3 {
+  color: #00796b;
 }
