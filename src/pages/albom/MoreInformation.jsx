@@ -66,57 +66,59 @@ function MoreInformation() {
 
   return (
     <div className="main-carousel">
-      <div className="carousel-informations">
-        <div className="main-1">
-          <img src={wordData.value} height="300" width="500" alt="Main" />
-          <div className="flex_row">
-            {imgs.map((data, i) => (
-              <div className="thumbnail" key={i}>
-                <img
-                  className={wordData.id === i ? "clicked" : ""}
-                  src={data.value}
-                  alt={`Thumbnail ${i}`}
-                  onClick={() => handleClick(i)}
-                />
-              </div>
-            ))}
-          </div>
+      <div className="carousel-informations" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px' }}>
+  <div className="main-1" style={{ maxWidth: '100%', textAlign: 'center' }}>
+    <img src={wordData.value} style={{ height: 'auto', width: '100%', maxWidth: '500px' }} alt="Main" />
+    <div className="flex_row" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px', marginTop: '10px' }}>
+      {imgs.map((data, i) => (
+        <div className="thumbnail" key={i} style={{ maxWidth: '130px', margin: '5px' }}>
+          <img
+            className={wordData.id === i ? "clicked" : ""}
+            src={data.value}
+            alt={`Thumbnail ${i}`}
+            style={{ width: '100%', cursor: 'pointer' }}
+            onClick={() => handleClick(i)}
+          />
         </div>
-        <div className="carousel-info">
-          <h1>Kontio Laaksolahti</h1>
-          <div className="details">
-            <div className="detail-item">
-              <span className="label">Тип строения</span>
-              <span className="value">Дом</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Технология</span>
-              <span className="value">Газобетон</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Габаритные размеры</span>
-              <span className="value">9x9,7</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Общая площадь</span>
-              <span className="value">149.4 м²</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Этажность</span>
-              <span className="value">Двухэтажный</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Количество комнат</span>
-              <span className="value">4</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Количество санузлов</span>
-              <span className="value">2</span>
-            </div>
-          </div>
-          <div className="price">от 15 000 000 ₽</div>
-        </div>
+      ))}
+    </div>
+  </div>
+  <div className="carousel-info" style={{ maxWidth: '100%', textAlign: 'center', marginTop: '20px' }}>
+    <h1 style={{ fontSize: '1.5em', marginBottom: '10px' }}>Kontio Laaksolahti</h1>
+    <div className="details" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '10px', textAlign: 'left' }}>
+      <div className="detail-item">
+        <span className="label">Тип строения</span>
+        <span className="value">Дом</span>
       </div>
+      <div className="detail-item">
+        <span className="label">Технология</span>
+        <span className="value">Газобетон</span>
+      </div>
+      <div className="detail-item">
+        <span className="label">Габаритные размеры</span>
+        <span className="value">9x9,7</span>
+      </div>
+      <div className="detail-item">
+        <span className="label">Общая площадь</span>
+        <span className="value">149.4 м²</span>
+      </div>
+      <div className="detail-item">
+        <span className="label">Этажность</span>
+        <span className="value">Двухэтажный</span>
+      </div>
+      <div className="detail-item">
+        <span className="label">Количество комнат</span>
+        <span className="value">4</span>
+      </div>
+      <div className="detail-item">
+        <span className="label">Количество санузлов</span>
+        <span className="value">2</span>
+      </div>
+    </div>
+    <div className="price" style={{ fontSize: '1.2em', marginTop: '20px' }}>от 15 000 000 ₽</div>
+  </div>
+</div>
+
       <div className="construction-page">
       <header className="construction-header">
         <h1>Строительные характеристики дома</h1>
