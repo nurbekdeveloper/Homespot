@@ -306,25 +306,23 @@ h1 {
 }
 
 
-.construction-page {
+
+
+.container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
-.construction-header, .cost-section, .additional-services, .why-us {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.heading {
+  color: #333;
+  margin-bottom: 10px;
 }
 
-.construction-header h1,
-.cost-section h2,
-.additional-services h2,
-.why-us h2 {
-  color: #004d40;
+.subheading {
+  color: #555;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -332,14 +330,37 @@ ul {
   padding: 0;
 }
 
-ul li {
-  margin: 10px 0;
+li {
+  margin-bottom: 10px;
 }
 
-.additional-services div {
-  margin-bottom: 20px;
+.characteristics, .pricing, .facade-options, .pre-finish, .why-us {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.additional-services h3 {
-  color: #00796b;
+.characteristic-item::before,
+.pricing-item::before,
+.facade-item::before,
+.pre-finish-item::before,
+.why-us-item::before {
+  content: '•';
+  color: #ff6347;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .heading, .subheading {
+    font-size: 1.2em;
+  }
+
+  li {
+    font-size: 0.9em;
+  }
 }
