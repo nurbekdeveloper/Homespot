@@ -1,49 +1,57 @@
 import React, { useState } from "react";
-import "./MoreInformation.css";
-import ContactForm from "../../componenets/form/ContactForm";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-  import   uploadedImage  from '../../Assets/005.jpg'
+import carousel1 from "../../Assets/1crousel.png"
+import carousel2 from "../../Assets/2carousel.png"
+import carousel3 from "../../Assets/3carousel.png"
 
-import mainImg from "../../Assets/maincrouselimg.png";
-import carousel1 from "../../Assets/2carousel.png";
-import carousel2 from "../../Assets/2carousel.png";
-import vector from '../../Assets/Vector.png'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import {
+  FaShieldAlt, FaUserTie, FaHandshake, FaHardHat,
+  FaTag, FaUsers, FaCalendarAlt, FaTasks,
+  FaTelegramPlane, FaWhatsapp
+} from 'react-icons/fa';
 import CardContainer from "../../componenets/project/CardContainer";
+import ContactForm from "../../componenets/form/ContactForm";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import "./MoreInformation.css";
+
 function MoreInformation() {
-
-
-
   const additionalInfo = [
-    {  label: "Спальня" },
-    {  label: "Кухня" },
-    {  label: "Кабинет" },
-    {  label: "Библиотека" },
+    { label: "Спальня" },
+    { label: "Кухня" },
+    { label: "Кабинет" },
+    { label: "Библиотека" },
     { label: "Сауна" },
-    {  label: "Цокольный этаж" },
+    { label: "Цокольный этаж" },
     { label: "Котельная" },
     { label: "Тех. помещения" },
     { label: "Винный погреб" },
-    {  label: "Бильярд" },
-    {  label: "Бассейн" },
-    {  label: "Спортзал" },
-    {  label: "Кинозал" },
-    {  label: "Камин" },
+    { label: "Бильярд" },
+    { label: "Бассейн" },
+    { label: "Спортзал" },
+    { label: "Кинозал" },
+    { label: "Камин" },
     { label: "Зимний сад" },
     { label: "Энергия" },
-    {  label: "Второй свет" },
-    {  label: "Лифт" },
+    { label: "Второй свет" },
+    { label: "Лифт" },
     { label: "Гараж" },
     { label: "Навес" },
-    {  label: "Веранда" },
+    { label: "Веранда" },
     { label: "Крыльцо" },
-    {  label: "Балкон" },
+    { label: "Балкон" },
     { label: "Тёплые полы" },
   ];
+
   const imgs = [
-    { id: 0, value: mainImg },
+    { id: 0, value: carousel3 },
     { id: 1, value: carousel1 },
     { id: 2, value: carousel2 },
   ];
+
   const [wordData, setWordData] = useState(imgs[0]);
   const [val, setVal] = useState(0);
 
@@ -66,7 +74,7 @@ function MoreInformation() {
 
   return (
     <div className="main-carousel">
-      <div className="carousel-informations">
+         <div className="carousel-informations">
         <div className="main-1">
           <img src={wordData.value} height="300" width="500" alt="Main" />
           <div className="flex_row">
@@ -81,93 +89,125 @@ function MoreInformation() {
               </div>
             ))}
           </div>
-        </div>
-        <div className="carousel-info">
-          <h1>Kontio Laaksolahti</h1>
-          <div className="details">
-            <div className="detail-item">
-              <span className="label">Тип строения</span>
-              <span className="value">Дом</span>
+
+          <div className="construction-cost">
+            <h1>Стоимость строительства дома</h1>
+            <div className="toggle-buttons">
+              <span>Из газобетона</span>
+
+              <span>Из теплой керамики</span>
             </div>
-            <div className="detail-item">
-              <span className="label">Технология</span>
-              <span className="value">Газобетон</span>
+            <div className="cost">9 045 283 руб.</div>
+            <div className="note">Без учета устройства террасы</div>
+            <div className="details">
+              <div className="detail">
+                <span className="icon">🏠</span> 165.7 м<sup>2</sup>
+              </div>
+              <div className="detail">
+                <span className="icon">🛏️</span> 3
+              </div>
+              <div className="detail">
+                <span className="icon">🏢</span> 1 этаж
+              </div>
             </div>
-            <div className="detail-item">
-              <span className="label">Габаритные размеры</span>
-              <span className="value">9x9,7</span>
+            <div className="article">Артикул: 000432</div>
+            <div className="specifications">
+              <h2>Спецификация</h2>
+              <ul className="label-items">
+                <li className="label-item">Фундамент – монолитная ж/б плита 300 мм, с разводкой системы канализации, водопровода.</li>
+                <li className="label-item" >Стены на выбор: камень керамический Porotherm 2/NF красный 250*120*140 М-150, толщина стен 380мм или керамический блок Porotherm Thermo 380, (250*380*219), марка–М100.</li>
+                <li className="label-item" >Потолки – 1-й этаж 3м, 2-ой этаж 2.75м.</li>
+                <li className="label-item" >Перекрытие – по деревянным балкам с обработкой огне–биозащитой.</li>
+                <li className="label-item" >Перегородки на выбор: 120мм, красный керамический кирпич М-150 или 120мм, керамический блок Porotherm 12, марка М-100.</li>
+                <li className="label-item" >Кровля – плоская мембранного типа с утеплением и внутренним организованным водоотводом системой.</li>
+              </ul>
             </div>
-            <div className="detail-item">
-              <span className="label">Общая площадь</span>
-              <span className="value">149.4 м²</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Этажность</span>
-              <span className="value">Двухэтажный</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Количество комнат</span>
-              <span className="value">4</span>
-            </div>
-            <div className="detail-item">
-              <span className="label">Количество санузлов</span>
-              <span className="value">2</span>
+            <div className="buttons">
+              <button className="consultation">Получить консультацию</button>
             </div>
           </div>
-          <div className="price">от 15 000 000 ₽</div>
         </div>
+
+        <div className="info-section">
+          <section className="header">
+            <h2>Что еще входит в стоимость</h2>
+            <div className="features">
+              <div className="feature">
+                <FaShieldAlt size={50} />
+                <p>5 лет гарантии</p>
+              </div>
+              <div className="feature">
+                <FaUserTie size={50} />
+                <p>Персональный менеджер</p>
+              </div>
+              <div className="feature">
+                <FaHandshake size={50} />
+                <p>Сопровождение заказчика</p>
+              </div>
+              <div className="feature">
+                <FaHardHat size={50} />
+                <p>Технический надзор</p>
+              </div>
+            </div>
+          </section>
+
+          <section className="additional-services">
+            <h2>Дополнительные услуги</h2>
+            <h3>Варианты фасадов</h3>
+            <ul>
+              <li>Облицовочный кирпич</li>
+              <li>Декоративная штукатурка</li>
+              <li>Комбинированная отделка фасада</li>
+            </ul>
+            <a href="#">Стоимость по запросу</a>
+          </section>
+
+          <section className="house-finishing">
+            <h2>Предчистовая отделка дома</h2>
+            <p>Штукатурка стен, полусухая стяжка пола, электрика, сантехника, отопление</p>
+            <p className="price">цена от 9 900 ₽/кв.м.</p>
+          </section>
+
+          <section className="reasons-to-trust">
+            <h2>Почему с нами надежно?</h2>
+            <div className="trust-features">
+              <div className="trust-feature">
+                <FaTag size={50} />
+                <p>Фиксированная цена</p>
+                <p>Стоимость строительства не меняется после заключения договора</p>
+              </div>
+              <div className="trust-feature">
+                <FaUsers size={50} />
+                <p>Квалифицированный персонал</p>
+                <p>В нашей компании только профильные специалисты, что гарантирует качество выполненных работ</p>
+              </div>
+              <div className="trust-feature">
+                <FaCalendarAlt size={50} />
+                <p>10 лет на рынке</p>
+                <p>Знакомы со всеми тонкостями и нюансами строительного рынка</p>
+              </div>
+              <div className="trust-feature">
+                <FaTasks size={50} />
+                <p>Поэтапная оплата</p>
+                <p>Вы платите за фактически выполненный этап работ, после приемки этапа и подписания акта выполненных работ</p>
+              </div>
+            </div>
+          </section>
+
+          <div className="contact-buttons">
+            <button className="telegram">
+              <FaTelegramPlane size={20} /> НАПИСАТЬ В TELEGRAM
+            </button>
+            <button className="whatsapp">
+              <FaWhatsapp size={20} /> НАПИСАТЬ В WHATSAPP
+            </button>
+          </div>
+        </div>
+
+        <CardContainer />
+        <ContactForm />
       </div>
-      <div className="container">
-      <h1 className="heading">Строительные характеристики дома</h1>
-      <ul className="characteristics">
-        <li className="characteristic-item"><strong>Фундамент:</strong> Монолитная железобетонная плита, 300 мм, с разводкой канализации и водопровода.</li>
-        <li className="characteristic-item"><strong>Стены:</strong> Газобетонные блоки, 375 мм, D400, армирование каждые 3 ряда.</li>
-        <li className="characteristic-item"><strong>Потолки:</strong> Высота 3 м.</li>
-        <li className="characteristic-item"><strong>Перегородки:</strong> Газобетонные блоки, 100 мм, D500.</li>
-        <li className="characteristic-item"><strong>Перекрытие:</strong> Деревянные балки, огне- и биозащитная обработка.</li>
-        <li className="characteristic-item"><strong>Вентиляция:</strong> Естественная для кухни и санузлов, подготовка под котел отопления, вывод через вентиляционные шахты.</li>
-        <li className="characteristic-item"><strong>Кровля:</strong> Стропильная система, супердиффузионная мембрана Folder, металлочерепица Grand Line 0.5 мм (Ral 8017).</li>
-      </ul>
-
-      <h1 className="heading">Что входит в стоимость</h1>
-      <ul className="pricing">
-        <li className="pricing-item"><strong>5 лет гарантии:</strong> Мы предоставляем 5-летнюю гарантию на все наши работы, чтобы вы могли быть уверены в их качестве и надежности.</li>
-        <li className="pricing-item"><strong>Персональный менеджер:</strong> Каждому клиенту предоставляется персональный менеджер, который будет на связи и поможет решить любые вопросы и задачи на протяжении всего проекта.</li>
-        <li className="pricing-item"><strong>Сопровождение заказчика:</strong> Наши специалисты обеспечат полное сопровождение заказчика на всех этапах строительства, начиная от проектирования и заканчивая финальной отделкой.</li>
-        <li className="pricing-item"><strong>Технический надзор:</strong> Мы осуществляем тщательный технический надзор на всех этапах строительства, чтобы гарантировать соответствие всех работ высоким стандартам качества.</li>
-      </ul>
-
-      <h1 className="heading">Дополнительные услуги</h1>
-      <h2 className="subheading">Варианты фасадов</h2>
-      <ul className="facade-options">
-        <li className="facade-item">Облицовочный кирпич</li>
-        <li className="facade-item">Декоративная штукатурка</li>
-        <li className="facade-item">Комбинированная отделка фасада</li>
-      </ul>
-      <p>Стоимость отделки фасада рассчитывается индивидуально и предоставляется по запросу.</p>
-
-      <h2 className="subheading">Предчистовая отделка дома</h2>
-      <ul className="pre-finish">
-        <li className="pre-finish-item">Штукатурка стен</li>
-        <li className="pre-finish-item">Полусухая стяжка пола</li>
-        <li className="pre-finish-item">Электромонтажные работы</li>
-        <li className="pre-finish-item">Установка сантехники</li>
-        <li className="pre-finish-item">Система отопления</li>
-      </ul>
-      <p>Цена на предчистовую отделку начинается от 8 500 ₽/кв.м.</p>
-
-      <h1 className="heading">Почему с нами надежно?</h1>
-      <ul className="why-us">
-        <li className="why-us-item"><strong>Гарантированная стоимость:</strong> Цена строительства остается неизменной после подписания договора. Мы обеспечиваем полную прозрачность и отсутствие скрытых расходов.</li>
-        <li className="why-us-item"><strong>Профессиональная команда:</strong> Наши сотрудники — это высококвалифицированные специалисты, что обеспечивает высокое качество всех выполненных работ.</li>
-        <li className="why-us-item"><strong>Богатый опыт работы:</strong> Шведстандарт имеет более 15 лет опыта в Швеции и более 20 лет в России. Мы успешно работаем на строительном рынке более 10 лет, что позволяет нам решать любые задачи и учитывать все особенности и нюансы отрасли.</li>
-        <li className="why-us-item"><strong>Оплата поэтапно:</strong> Вы оплачиваете только завершенные этапы работ, после их приемки и подписания соответствующих актов.</li>
-      </ul>
-    </div>
-
-    <CardContainer/>
-    <ContactForm/>
-    </div>
+</div>
   );
 }
 

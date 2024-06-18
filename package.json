@@ -27,6 +27,7 @@
     "react-slick": "^0.30.2",
     "route": "^0.2.5",
     "styled-components": "^6.1.11",
+    "swiper": "^11.1.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
