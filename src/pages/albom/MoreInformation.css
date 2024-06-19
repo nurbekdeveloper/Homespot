@@ -5,23 +5,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 15px;
 }
 
 .carousel-informations {
+display: flex;
+
+}
+
+.main-1  {
+width:60%;
+
+}
+.construction-cost{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  flex-direction: column;
+  gap: 15px ;
 }
-
-.main-1, .construction-cost {
-  flex: 1 1 48%;
-  box-sizing: border-box;
+.construction-cost{
+  width: 40%;
+  padding: 10px;
 }
-
+.construction-cost h1 {
+  font-weight: 600;
+}
 .main-1 img {
   width: 100%;
   height: auto;
