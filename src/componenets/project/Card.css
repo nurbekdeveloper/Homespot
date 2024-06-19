@@ -1,11 +1,15 @@
-.card {
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 250px;
-  margin: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Card.css */
 
+.card-ready {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  margin: 10px;
+}
+
+.card-ready:hover {
+  transform: scale(1.05);
 }
 
 .card-image {
@@ -14,22 +18,46 @@
 }
 
 .card-content {
-  padding: 10px;
+  padding: 15px;
+  text-align: center;
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 1.5rem;
   margin: 10px 0;
 }
 
-.card-technology,
-.card-dimensions,
-.card-price {
+.card-technology, .card-dimensions, .card-price {
+  font-size: 1rem;
   margin: 5px 0;
-  color: #555;
 }
 
-.card-price {
-  color: green;
-  font-weight: bold;
+/* Mobile devices (portrait and landscape) */
+@media (max-width: 767px) {
+  .card-title {
+      font-size: 1.2rem;
+  }
+  .card-technology, .card-dimensions, .card-price {
+      font-size: 0.9rem;
+  }
+}
+
+/* Tablets (portrait and landscape) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card-title {
+      font-size: 1.4rem;
+  }
+  .card-technology, .card-dimensions, .card-price {
+      font-size: 1rem;
+  }
+}
+
+/* Desktops and larger screens */
+@media (min-width: 1024px) {
+  .card-title {
+      font-size: 1.5rem;
+  }
+  .card-technology, .card-dimensions, .card-price {
+      font-size: 1rem;
+  }
 }
