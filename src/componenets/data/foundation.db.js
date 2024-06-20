@@ -432,7 +432,7 @@ const foundations = [
   },
    {
     title: 'Имитация бруса',
-    nicname:"typesof-card-16",
+    nicname:"typesof-card-201",
     price: 'от 10 900 ₽ / куб.м',
     url:"Sborno-blochniy-fundament",
     maindescription:'',
