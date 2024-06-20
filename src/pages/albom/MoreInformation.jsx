@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import carousel1 from "../../Assets/1crousel.png";
 import carousel2 from "../../Assets/2carousel.png";
 import carousel3 from "../../Assets/3carousel.png";
+import freeImg from "../../Assets/freeimg.jpg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
@@ -83,7 +84,7 @@ function MoreInformation() {
     <div className="main-carousel">
       <div className="carousel-informations">
         <div className="main-1">
-          <img src={wordData.value} height="300" width="500" alt="Main" />
+          <img src={wordData.value}  alt="Main" />
           <div className="flex_row">
             {imgs.map((data, i) => (
               <div className="thumbnail" key={i}>
@@ -153,7 +154,7 @@ function MoreInformation() {
 
       <div className="info-section">
         <section className="header">
-          <h2>Что еще входит в стоимость</h2>
+          <h2 className="font-semibold  text-2xl">Что еще входит в стоимость</h2>
           <div className="features">
             <div className="feature">
               <FaShieldAlt size={50} />
@@ -174,28 +175,36 @@ function MoreInformation() {
           </div>
         </section>
 
-        <section className="additional-services">
-          <h2>Дополнительные услуги</h2>
-          <h3>Варианты фасадов</h3>
-          <ul>
-            <li>Облицовочный кирпич</li>
-            <li>Декоративная штукатурка</li>
-            <li>Комбинированная отделка фасада</li>
-          </ul>
-          <a href="#">Стоимость по запросу</a>
-        </section>
+       <div className="extra-usluge">
+        <div  className="extra-usluge-element">
 
-        <section className="house-finishing">
-          <h2>Предчистовая отделка дома</h2>
-          <p>
-            Штукатурка стен, полусухая стяжка пола, электрика, сантехника,
-            отопление
-          </p>
-          <p className="price">цена от 9 900 ₽/кв.м.</p>
-        </section>
+                <section className="additional-services">
+                  <h2 className="font-semibold  text-2xl">Дополнительные услуги</h2>
+                  <h3>Варианты фасадов</h3>
+                  <ul>
+                    <li>Облицовочный кирпич</li>
+                    <li>Декоративная штукатурка</li>
+                    <li>Комбинированная отделка фасада</li>
+                  </ul>
+                  <a href="#">Стоимость по запросу</a>
+                </section>
+                <section className="house-finishing">
+                  <h2 className="font-semibold  text-2xl">Предчистовая отделка дома</h2>
+                  <p>
+                    Штукатурка стен, полусухая стяжка пола, электрика, сантехника,
+                    отопление
+                  </p>
+                  <p className="price">цена от 9 900 ₽/кв.м.</p>
+                </section>
+        </div>
 
-        <section className="reasons-to-trust">
-          <h2>Почему с нами надежно?</h2>
+        <img src={freeImg} alt="salom " />
+       </div>
+
+
+
+        <section className="reasons-to-trust  mt-[40px] mb-5">
+          <h2 className="font-semibold  text-2xl" >Почему с нами надежно?</h2>
           <div className="trust-features">
             <div className="trust-feature">
               <FaTag size={50} />
