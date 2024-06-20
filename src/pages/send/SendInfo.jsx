@@ -1,5 +1,9 @@
 import React from 'react'
 import './SendInfo.css'
+
+import { Link,useLocation } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { changeModal } from '../../pages/redux/slice/modal.slice'
 const SendInfo = () => {
   return (
     <div>
@@ -23,7 +27,7 @@ const SendInfo = () => {
             <input type="checkbox" id="consent" name="consent" required />
             <label htmlFor="consent">Даю согласие на обработку персональных данных</label>
           </div>
-          <button type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
+          <button  onClick={()=>dispatchEvent(changeModal(true))}  type="submit">ОСТАВИТЬ ЗАЯВКУ</button>
         </form>
       </div>
     </div>

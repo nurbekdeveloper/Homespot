@@ -48,8 +48,8 @@ const cardData = [
 
 const CardContainer = () => {
     return (
-        <div>
-             <h2 className='title'>Наши готовые Проекты</h2>
+        <div className='mt-[100px] '>
+             <h2 className='title mb-3  font-semibold  text-2xl '>Наши готовые Проекты</h2>
             <p>Посмотрите галерею наших завершенных проектов, чтобы вдохновиться и выбрать то, что подходит именно вам</p>
              <div className="card-container">
 

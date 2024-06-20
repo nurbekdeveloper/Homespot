@@ -6,11 +6,15 @@ import "./mobileNavbar.css"
 import { AiOutlineClose } from 'react-icons/ai'
 import { Link, useLocation } from 'react-router-dom'
 import {GrNext,GrPrevious} from "react-icons/gr"
+
+import { useDispatch, useSelector } from 'react-redux'
+import { changeModal } from '../../pages/redux/slice/modal.slice'
 const Resnav = () => {
     const [firstnav,setFirstnav] = useState(false)
     const [secondnav,setSecondnav] = useState(false)
 
   const {pathname} = useLocation()
+  const dispatch = useDispatch()
 
     return (
     <div className='resnav'>
@@ -31,7 +35,7 @@ const Resnav = () => {
 
                 <p>+998 94 <span>210-74-47</span></p>
             </a>
-            <button>ОСТАВИТЬ ЗАЯВКУ</button>
+            <button  onClick={()=>dispatch(changeModal(true))}>ОСТАВИТЬ ЗАЯВКУ</button>
         </div>
         <div className={`second-nav ${(secondnav && firstnav) ? "" : "close"}`}>
         <div className='sec-nav-mebel' onClick={()=>setSecondnav(false)}><div><GrPrevious/></div><div>Мебель</div></div>

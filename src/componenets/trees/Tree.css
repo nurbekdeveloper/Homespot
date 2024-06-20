@@ -64,6 +64,7 @@
 }
 
 .tree-container {
+
   width: 100%;
   margin-top: 20px;
 }
@@ -71,7 +72,7 @@
 .tree-image {
   width: 100%;
   height: auto;
-  margin-top: -250px;
+
 }
 
 @media (max-width: 1024px) {
