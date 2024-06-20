@@ -291,6 +291,7 @@ input:checked + .slider:before {
 
 
 
+
   .carousel-informations > * {
     flex: 1 1 auto;
     max-width: calc(50% - 20px);
