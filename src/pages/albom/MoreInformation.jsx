@@ -59,6 +59,7 @@ function MoreInformation() {
                   onClick={() => handleClick(i)}
                 />
               </div>
+
             ))}
           </div>
         </div>

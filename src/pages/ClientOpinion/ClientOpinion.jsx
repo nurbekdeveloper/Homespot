@@ -9,21 +9,21 @@ import { useSelector } from 'react-redux';
 const cards = [
   {
     id: 1,
-    image: otziv1,
+    image: "https://www.youtube.com/watch?v=NbsC6bo719c&t=11s",
     title: 'Иван Петров',
     description: 'Отличная работа! Строительство дома прошло быстро и качественно. Очень доволен результатом."',
     link: 's#'
   },
   {
     id: 2,
-    image: otziv2,
+    image: "https://www.youtube.com/watch?v=L8RraTkxC6s",
     title: 'Алексей Иванов',
     description: 'Проектирование и строительство коттеджа прошло на высшем уровне. Приятно работать с такими профессионалами.',
     link: 's#'
   },
   {
     id: 3,
-    image: otziv3,
+    image: "https://www.youtube.com/watch?v=x_EyL00hD80",
     title: 'Ольга Смирнова',
     description: ' "Благодарю за капитальный ремонт. Качество работ на высоте, буду обращаться снова!"',
     link: 's#'
@@ -41,7 +41,9 @@ const ClientOpinion = () => {
         <div className="client-opinion-container">
           {cards.map(card => (
             <div className="client-opinion-card" key={card.id} onClick={() => navigate(`/construction-in${typehomeurl}-` + card.link)}>
-              <img src={card.image} alt={`House Image ${card.id}`} />
+            <video width="750" height="500" controls  >
+                  <source src={card.image} type="video/mp4"/>
+            </video>
               <div className="client-opinion-card-content">
                 <p className="client-opinion-date">{card.date}</p>
                 <h3>{card.title}</h3>

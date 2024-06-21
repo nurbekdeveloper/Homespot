@@ -12,6 +12,9 @@ import MoreInformation from './pages/albom/MoreInformation';
 import OurservesTwopage from './pages/ourservestwopage/OurservesTwopage';
 import Modals from './componenets/appliacation/Modal';
 import { useSelector } from 'react-redux';
+import { Form } from 'react-bootstrap';
+import ContactForm from './componenets/form/ContactForm';
+import CardContainer from './componenets/project/CardContainer';
 
 const Contact = lazy(() => import("./pages/contact/Contact"))
 const Worker = lazy(() => import("./pages/worker/Worker"))

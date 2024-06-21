@@ -2,12 +2,12 @@
 .all {
   display: flex;
   flex-direction: column;
-  
+
   background-color: #b2d235;
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
- 
+
 }
 
 .form {
@@ -99,4 +99,3 @@ text-align: left;
     margin: 0 2rem;
   }
 }
-
