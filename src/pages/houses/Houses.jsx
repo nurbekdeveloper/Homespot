@@ -3,9 +3,10 @@ import React, { useEffect, useState } from 'react';
 
 import './houses.css';
 import houseImage from '../../Assets/houses.png'; // Ensure the images are in the src folder
-
+import { useNavigate, useParams } from 'react-router-dom';
 import FaqQuestion from '../../componenets/faqquestion/FaqQuestion';
-import { useNavigate } from 'react-router-dom';
+import { housedb } from '../../componenets/data/homes.db';
+
 
 
 
@@ -29,7 +30,9 @@ const House= (url) => {
 
   const [openModal,setOpenModal] = useState(false)
   const navigate = useNavigate()
+  const {slug}= useParams()
 
+    const filterhouse = housedb.filter(c=>c.url === slug)
   return (
 
 
