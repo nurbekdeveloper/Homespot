@@ -86,16 +86,16 @@ const Navbar = () => {
       </div>
       <div className={ `dropdown ${dropdown2 ? 'open' : ""}`}  >
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-rukovoditeley"}  onClick={changeSlug} >Монтаж фундамента</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-sotrudnikov"}  onClick={changeSlug} >Кровельные работы</Link></div>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Наружная отделка дома</Link></div>
+          <div className='nav_item_link'><Link to={"services/lentochiy-fundament"}  onClick={changeSlug} >Монтаж фундамента</Link></div>
+          <div className='nav_item_link'><Link to={"services/monolitnaya-plita"} onClick={changeSlug} >Кровельные работы</Link></div>
+          <div className='nav_item_link'><Link to={"services/Sborno-blochniy-fundament"}  onClick={changeSlug} >Наружная Отделка Дома</Link></div>
 
 
           {/* <div className='nav_item_link'><Link to={"/mebel/Столы для менеджеров"}  onClick={changeSlug} >Столы для менеджеров</Link></div> */}
 
         </div>
         <div className='nav_item'>
-          <div className='nav_item_link'><Link to={"/mebel/stol-dlya-peregovorov"}  onClick={changeSlug} >Внутренняя отделка дома</Link></div>
+          <div className='nav_item_link'><Link to={"services/svayno-rostverkoviy-fundament"}  onClick={changeSlug} >Внутренняя отделка дома</Link></div>
         </div>
       </div>
     </div>

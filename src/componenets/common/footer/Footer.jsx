@@ -29,13 +29,36 @@ const Footer = () => {
           <p>
             <Link to={"/design"}>Проектирование</Link>
           </p>
-        </div>
-        <div className="footer-column">
-
           <p><Link to={"/about"}>О Нас</Link></p>
           <p><Link to={"/project"}>Наши Работы </Link></p>
 
           <p><Link>Контакты </Link></p>
+        </div>
+        <div className="footer-column">
+          <p>
+            <Link to={"services/lentochiy-fundament"}>Монтаж фундамента</Link>
+          </p>
+          <p>
+            <Link to={"services/monolitnaya-plita"}>Кровельные работы</Link>
+          </p>
+          <p>
+            <Link to={"services/Sborno-blochniy-fundament"} >Наружная отделка дома</Link>
+          </p>
+
+          <p>
+            <Link to={"services/svayno-rostverkoviy-fundament"}>Внутренняя отделка дома</Link>
+          </p>
+          <p>
+            <Link to={"/about"} >Домов</Link>
+          </p>
+          <p>
+            <Link to={"/project"}>Тини хаус </Link>
+          </p>
+
+
+          <p>
+            <Link>Гаражи/Навесы</Link>
+          </p>
 
         </div>
 

@@ -15,9 +15,11 @@
 }
 
 .footer-column {
-  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   min-width: 200px;
-  margin-bottom: 20px;
+
 }
 
 .footer-column h3 {
@@ -35,7 +37,7 @@
 .footer-logo {
   max-width: 150px;
   height: auto;
-  margin-bottom: 20px;
+
 }
 
 .contact-info a {
