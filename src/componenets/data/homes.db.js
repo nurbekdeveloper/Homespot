@@ -277,7 +277,7 @@ const houses = [
     id: 15,
     name: "Г-69",
     image: houseImage,
-    url: "g-69-8 ",
+    url: "g-69-8",
     type: "tiny-house",
      floor :"",
     room:"",
