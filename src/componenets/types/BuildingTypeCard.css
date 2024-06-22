@@ -1,7 +1,7 @@
 /* src/BuildingTypeCard.css */
 .cardb {
   position: relative;
-  max-width: 200px;
+  max-width: 400px;
   margin: 10px;
   text-align: center;
   font-family: Arial, sans-serif;
@@ -45,7 +45,7 @@
 /* src/BuildingTypes.css */
 .building-types {
   display: flex;
-  justify-content:space-evenly;
+  justify-content:space-around;
   flex-wrap: wrap;
   padding: 20px;
   background-color: #fff;

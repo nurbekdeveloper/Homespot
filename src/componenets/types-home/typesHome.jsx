@@ -7,6 +7,7 @@ import House from '../../pages/houses/Houses';
 import CardContainer from '../project/CardContainer';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import homesss from "../data/homes.db"
 
 const cards = [
     {
@@ -21,7 +22,7 @@ const cards = [
       image: house2,
       title: ' Кирпич ',
       description: '  Эстетика , Устойчивость к погоде , Долговечность , Прочность ,  Преимущества      ',
-      link: 's#'
+      link: "s#"
     },
     {
       id: 3,

@@ -30,7 +30,7 @@ const BuildingTypes = (url ) => {
                 <BuildingTypeCard
                     key={index}
                     image={type.image}
-                    count={type.count}
+
                     title={type.title}
                     url={type.url}
                 />

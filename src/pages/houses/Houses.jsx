@@ -37,15 +37,13 @@ const House= (url) => {
 
 
     <div>
-
         <div className="house-grid-container">
-
       <div className="house-grid" >
         {houses.map(house => (
           <div key={house.id} className="house-card"  onClick={()=>navigate('/services'+ url)}>
             <img src={house.image} alt={house.name} className="house-image" />
             <div className="house-info">
-              <h2>{house.name}</h2>
+              {/* <h2>{filterhouse.}</h2> */}
               {house.type && <p>Тип: {house.type}</p>}
               {house.technology && <p>Технология: {house.technology}</p>}
               {house.dimensions && <p>Габариты: {house.dimensions}</p>}
@@ -65,10 +63,6 @@ const House= (url) => {
       </div>
       <button className="filter-button">Расширенный фильтр</button>
     </div>
-
-
-
-
     </div>
   );
 };

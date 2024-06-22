@@ -14,7 +14,7 @@ const BuildingTypeCard = ({ image, count, title,url }) => {
     }
     return (
         <div className="cardb" onClick={()=>changeTypeUrl(url)}>
-            <div className="badge">{count}</div>
+
             <img src={image} alt={title} className="card-image" />
             <div className="card-title">{title}</div>
         </div>

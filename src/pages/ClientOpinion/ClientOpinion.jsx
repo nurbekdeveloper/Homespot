@@ -1,31 +1,29 @@
 import React from 'react';
 import './ClientOpinion.css';
-import otziv3 from '../../Assets/otziv3.jpg';
-import otziv1 from '../../Assets/otziv1.jpg';
-import otziv2 from '../../Assets/otiziv2.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import YouTube from 'react-youtube';
 
 const cards = [
   {
     id: 1,
-    image: "https://www.youtube.com/watch?v=NbsC6bo719c&t=11s",
+    videoId: 'NbsC6bo719c',
     title: 'Иван Петров',
-    description: 'Отличная работа! Строительство дома прошло быстро и качественно. Очень доволен результатом."',
+    description: 'Отличная работа! Строительство дома прошло быстро и качественно. Очень доволен результатом.',
     link: 's#'
   },
   {
     id: 2,
-    image: "https://www.youtube.com/watch?v=L8RraTkxC6s",
+    videoId: 'L8RraTkxC6s',
     title: 'Алексей Иванов',
     description: 'Проектирование и строительство коттеджа прошло на высшем уровне. Приятно работать с такими профессионалами.',
     link: 's#'
   },
   {
     id: 3,
-    image: "https://www.youtube.com/watch?v=x_EyL00hD80",
+    videoId: 'x_EyL00hD80',
     title: 'Ольга Смирнова',
-    description: ' "Благодарю за капитальный ремонт. Качество работ на высоте, буду обращаться снова!"',
+    description: 'Благодарю за капитальный ремонт. Качество работ на высоте, буду обращаться снова!',
     link: 's#'
   }
 ];
@@ -34,21 +32,27 @@ const ClientOpinion = () => {
   const navigate = useNavigate();
   const { typehomeurl } = useSelector((state) => state.typelink);
 
+  const videoOptions = {
+    height: '340px',
+    width: '340px',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
   return (
-    <div>
+    <div className='client-opinion' >
       <h1 className='client-opinion-title'>Отзывы наших клиентов</h1>
       <div className='client-opinion-home'>
         <div className="client-opinion-container">
           {cards.map(card => (
             <div className="client-opinion-card" key={card.id} onClick={() => navigate(`/construction-in${typehomeurl}-` + card.link)}>
-            <video width="750" height="500" controls  >
-                  <source src={card.image} type="video/mp4"/>
-            </video>
+              <div className="youtube-player-container">
+                <YouTube videoId={card.videoId} opts={videoOptions} />
+              </div>
               <div className="client-opinion-card-content">
-                <p className="client-opinion-date">{card.date}</p>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-
               </div>
             </div>
           ))}

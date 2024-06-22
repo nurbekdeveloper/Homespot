@@ -23,25 +23,29 @@ const houses = [
       image: house001 },
   {
     id: 2,
-    name: "Kontio Laaksolahti",
+    name: "Glass House 25A",
     image: house002 ,
+    type: "Баня",
+      technology: "Клееный брус",
+      dimensions: "100x100x100",
+      price: "1 000 000 Р",
     url:'kontio-laaksolahti'
   },
   {
     id: 3,
-    name: "Г-69",
+    name: "Glass House 25A",
     image: house003  ,
      url :'g-69'
   },
   {
      id: 4,
-      name: "Н-49",
+     name: "Glass House 25A",
        image: house004 ,
          url:'h-64'
     },
   {
     id: 5,
-     name: "База отдыха сибирь",
+    name: "Glass House 25A",
       image: house005,
       url:'sibir-dam-olish-markazi'
    },
