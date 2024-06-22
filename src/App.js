@@ -12,9 +12,9 @@ import MoreInformation from './pages/albom/MoreInformation';
 import OurservesTwopage from './pages/ourservestwopage/OurservesTwopage';
 import Modals from './componenets/appliacation/Modal';
 import { useSelector } from 'react-redux';
-import { Form } from 'react-bootstrap';
-import ContactForm from './componenets/form/ContactForm';
-import CardContainer from './componenets/project/CardContainer';
+
+
+import PersonalProject from './pages/home/PersonalProject';
 
 const Contact = lazy(() => import("./pages/contact/Contact"))
 const Worker = lazy(() => import("./pages/worker/Worker"))
@@ -23,7 +23,6 @@ const Construction = lazy(() => import("./pages/Construction/Construction"))
 const Services = lazy(() => import("./pages/services/Sevices"))
 const Main = lazy(() => import("./pages/main"))
 const TypesHome  = lazy(() => import("./componenets/types-home/typesHome"))
-const CommercialBuilding = lazy(() => import("./pages/CommercialBuilding/CommercialBuilding"))
 
 
 
@@ -43,7 +42,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/design" element={<Worker />} />
           <Route path="/construction" element={<Construction />} />
-          <Route path="/project" element={<AllHouseType/>} />
+          <Route path="/project" element={<PersonalProject/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/services' element={<Services />} />
           <Route path='/services/data/:slug' element={<OurservesTwopage />} />

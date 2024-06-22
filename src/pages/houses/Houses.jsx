@@ -11,6 +11,8 @@ import { housedb } from '../../componenets/data/homes.db';
 
 
 
+
+
 const houses = [
   { id: 1, name: "Glass House 25A", type: "Баня", technology: "Клееный брус", dimensions: "100x100x100", price: "1 000 000 Р", image: houseImage },
   { id: 2, name: "Kontio Laaksolahti", image: houseImage },
@@ -21,12 +23,10 @@ const houses = [
   { id: 7, name: "Kontio Laaksolahti", image: houseImage },
   { id: 8, name: "Г-69", image: houseImage },
 ];
-
-const House= (url) => {
+const House= ({url,data=houses}) => {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
-
 
   const [openModal,setOpenModal] = useState(false)
   const navigate = useNavigate()
@@ -39,7 +39,7 @@ const House= (url) => {
     <div>
         <div className="house-grid-container">
       <div className="house-grid" >
-        {houses.map(house => (
+        {data.map(house => (
           <div key={house.id} className="house-card"  onClick={()=>navigate('/services'+ url)}>
             <img src={house.image} alt={house.name} className="house-image" />
             <div className="house-info">

@@ -24,9 +24,10 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "./MoreInformation.css";
 import { useDispatch } from "react-redux";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 import { changeModal } from "../../pages/redux/slice/modal.slice";
+import { houses } from "../../componenets/data/homes.db";
 
 function MoreInformation() {
   const dispatch = useDispatch();
@@ -37,12 +38,15 @@ function MoreInformation() {
     { id: 2, value: carousel2 },
   ];
 
-  const [wordData, setWordData] = useState(imgs[0]);
   const [val, setVal] = useState(0);
+  const {slug} = useParams()
+
+  const HouseData = houses.find(c=>c.url === slug)
+  const [wordData, setWordData] = useState(HouseData?.imgs[0]);
 
   const handleClick = (index) => {
     setVal(index);
-    setWordData(imgs[index]);
+    setWordData(HouseData?.imgs[index]);
   };
   return (
     <div className="main-carousel">
@@ -50,7 +54,7 @@ function MoreInformation() {
         <div className="main-1">
           <img src={wordData.value} alt="Main" />
           <div className="flex_row">
-            {imgs.map((data, i) => (
+            {HouseData?.imgs.map((data, i) => (
               <div className="thumbnail" key={i}>
                 <img
                   className={wordData.id === i ? "clicked" : ""}
@@ -65,7 +69,7 @@ function MoreInformation() {
         </div>
         <div className="construction-cost">
           <h1 className="font-semibold  text-2xl">
-            Стоимость строительства дома
+            Стоимость строительства дома:
           </h1>
 
           <div className="cost">9 045 283 руб.</div>
@@ -86,35 +90,34 @@ function MoreInformation() {
             <h2>Спецификация</h2>
             <ul className="label-items">
               <li className="label-item">
-                Фундамент – монолитная ж/б плита 300 мм, с разводкой системы
-                канализации, водопровода.
+              	<b>Фундамент:</b> {HouseData?.fundament}
               </li>
               <li className="label-item">
-                Стены на выбор: камень керамический Porotherm 2/NF красный
-                250*120*140 М-150, толщина стен 380мм или керамический блок
-                Porotherm Thermo 380, (250*380*219), марка–М100.
+              <b>Стены:</b>{HouseData?.steni}
               </li>
               <li className="label-item">
-                Потолки – 1-й этаж 3м, 2-ой этаж 2.75м.
+               <b>Потолки:</b> Первый этаж 3 м,
               </li>
               <li className="label-item">
-                Перекрытие – по деревянным балкам с обработкой огне–биозащитой.
+                <b>Перекрытие: </b>– по деревянным балкам с обработкой огне–биозащитой.
               </li>
               <li className="label-item">
-                Перегородки на выбор: 120мм, красный керамический кирпич М-150
-                или 120мм, керамический блок Porotherm 12, марка М-100.
+                <b>Перегородки:</b> Кирпичные, толщиной, 120 мм,
               </li>
               <li className="label-item">
-                Кровля – плоская мембранного типа с утеплением и внутренним
-                организованным водоотводом системой.
+              <b>Вентиляция:</b> Естественная вентиляция для котельной, кухни и санузлов, выводящаяся на кровлю.
+              </li>
+              <li className="label-item">
+                <b>Кровля :</b> Стропильная система, супердиффузионная мембрана Folder, металлочерепица Grand Line 0.5 мм (Ral 8017).
+
+
               </li>
             </ul>
           </div>
           <div className="buttons">
             <button
               onClick={() => dispatch(changeModal(true))}
-              className="consultation bg-[#65a30d]"
-            >
+              className="consultation bg-[#65a30d]" >
               Получить консультацию
             </button>
           </div>
@@ -149,28 +152,24 @@ function MoreInformation() {
         <div>
         <h2 className="font-semibold  mb-[100px] text-2xl">Дополнительные услуги</h2>
           <div className="extra-usluge">
-
-            <div className="extra-usluge-element">
-              <section className="additional-services">
-                <h3 className="font-semibold  text-xl">Варианты фасадов</h3>
-                <ul className="text-left flex items-center flex-col">
-                  <li className="text-left">Облицовочный кирпич</li>
-                  <li className="text-left">Декоративная штукатурка</li>
-                  <li className="text-left">Комбинированная отделка фасада</li>
-                </ul>
-                <a href="#">Стоимость по запросу</a>
-              </section>
-              <section className="house-finishing">
-                <h2 className="font-semibold  text-2xl">
-                  Предчистовая отделка дома
-                </h2>
-                <p>
-                  Штукатурка стен, полусухая стяжка пола, электрика, сантехника,
-                  отопление
-                </p>
-                <p className="price">цена от 9 900 ₽/кв.м.</p>
-              </section>
+          <div className="facade-container">
+            <div className="brick-facade">
+              <h2>Облицовочный кирпич</h2>
+              <p><strong>Преимущества:</strong> Долговечность, устойчивость к погоде, классический вид.</p>
+              <p><strong>Недостатки:</strong> Высокая стоимость, трудоёмкая установка.</p>
             </div>
+            <div className="plaster-facade">
+              <h2>Декоративная штукатурка</h2>
+              <p><strong>Преимущества:</strong> Разнообразие текстур и цветов, улучшенная теплоизоляция.</p>
+              <p><strong>Недостатки:</strong> Требует ухода, менее долговечна.</p>
+            </div>
+            <div className="combined-facade">
+              <h2>Комбинированная отделка</h2>
+              <p><strong>Преимущества:</strong> Комбинация материалов, улучшенный дизайн, повышенная долговечность.</p>
+              <p><strong>Недостатки:</strong> Сложность установки, дополнительные расходы.</p>
+              <p><strong>Стоимость:</strong> по запросу.</p>
+            </div>
+           </div>
             <img src={freeImg} alt="salom " />
           </div>
         </div>
@@ -180,30 +179,28 @@ function MoreInformation() {
           <div className="trust-features">
             <div className="trust-feature">
               <FaTag size={50} />
-              <p>Фиксированная цена</p>
+              <p><b>Фиксированная цена</b></p>
               <p>
-                Стоимость строительства не меняется после заключения договора
+              Стоимость строительства остается неизменной после подписания договора.
               </p>
             </div>
             <div className="trust-feature">
               <FaUsers size={50} />
-              <p>Квалифицированный персонал</p>
+              <p><b>Квалифицированный персонал</b></p>
               <p>
-                В нашей компании только профильные специалисты, что гарантирует
-                качество выполненных работ
+              В нашей команде работают только профильные специалисты, что гарантирует высокое качество выполненных работ.
               </p>
             </div>
             <div className="trust-feature">
               <FaCalendarAlt size={50} />
-              <p>10 лет на рынке</p>
-              <p>Знакомы со всеми тонкостями и нюансами строительного рынка</p>
+              <p><b>10 лет на рынке</b></p>
+              <p> Мы имеем богатый опыт и знаем все тонкости и нюансы строительного рынка.</p>
             </div>
             <div className="trust-feature">
               <FaTasks size={50} />
-              <p>Поэтапная оплата</p>
+              <p><b>Поэтапная оплата</b></p>
               <p>
-                Вы платите за фактически выполненный этап работ, после приемки
-                этапа и подписания акта выполненных работ
+              Оплата производится поэтапно: вы платите только за фактически выполненные работы после приемки этапа и подписания акта выполненных работ.
               </p>
             </div>
           </div>

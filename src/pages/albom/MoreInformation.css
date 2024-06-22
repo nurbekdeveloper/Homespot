@@ -335,3 +335,29 @@ input:checked + .slider:before {
     margin: 10px 0;
   }
 }
+
+
+.facade-container {
+  width: 45%;
+  margin: auto;
+
+}
+
+.brick-facade, .plaster-facade, .combined-facade {
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  background-color: #f7f1e3;
+}
+
+.brick-facade {
+  background-color: #f7f1e3; /* Light beige */
+}
+
+.plaster-facade {
+  background-color: #d1ccc0; /* Light gray */
+}
+
+.combined-facade {
+  background-color: #ffcccc; /* Light red */
+}

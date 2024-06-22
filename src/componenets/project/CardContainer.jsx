@@ -11,6 +11,7 @@ const cardData = [
     {
         image: useful1,
         title: 'Kontio Laaksolahti',
+
         technology: 'Клееный брус',
         dimensions: '10x10x10',
         price: '1 000 000 Р'

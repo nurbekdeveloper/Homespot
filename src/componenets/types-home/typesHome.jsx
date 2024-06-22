@@ -5,9 +5,11 @@ import house2 from "../../Assets/house2.jpg"
 import house3 from "../../Assets/house3.jpg"
 import House from '../../pages/houses/Houses';
 import CardContainer from '../project/CardContainer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import homesss from "../data/homes.db"
+import { houses } from "../../componenets/data/homes.db";
+
 
 const cards = [
     {
@@ -15,34 +17,37 @@ const cards = [
       image: house1,
       title: 'Газобетон',
       description: 'Легкость , Теплоизоляция , Звукоизоляция, Простота обработки ,  Экологичность ',
-      link: 's#'
+      link: 'gazabeton'
     },
     {
       id: 2,
       image: house2,
       title: ' Кирпич ',
       description: '  Эстетика , Устойчивость к погоде , Долговечность , Прочность ,  Преимущества      ',
-      link: "s#"
+      link: "kirpich"
     },
     {
       id: 3,
       image: house3,
       title: 'Каркасные дома',
       description: '        Преимущества , Быстрое строительство , Экономичность , Гибкость дизайна , Энергоэффективность  ',
-      link: 's#'
+      link: 'karkasniy'
     }
 ];
 
 const TypesHome = () => {
   const navigate = useNavigate();
-  const { typehomeurl } = useSelector((state) => state.typelink);
+  const {slug} = useParams()
+
+  // const { typehomeurl } = useSelector((state) => state.typelink);
+  const newHouses = houses.filter(x=>x.type === slug)
 
   return (
     <div>
       <div className='type__home'>
         <div className="containerr">
           {cards.map(card => (
-            <div className="card" key={card.id} onClick={() => navigate(`/construction-in${typehomeurl}-` + card.link)}>
+            <div className="card" key={card.id} onClick={() => navigate(`/construction-in/${card.link}`)}>
               <img className='houseimg' src={card.image} alt={`"Наши специалисты по, строительству домов, строительству бань, строительству навесов, строительству tiny houses, и предоставлению, ремонтных услуг, работают над очередным проектом. Высокое качество, строительства домов, строительство бань, строительство навесов, и строительство tiny houses, гарантировано. Обращайтесь за, ремонтными услугами, строительством домов, и строительством бань, к нам!"`} />
               <div className="card-content">
                 <h3>{card.title}</h3>
@@ -52,7 +57,10 @@ const TypesHome = () => {
           ))}
         </div>
       </div>
-      <House />
+      {
+        slug === "home" ?  <House /> :  <House data={newHouses}/>
+      }
+
       <CardContainer />
     </div>
   )

@@ -11,10 +11,10 @@ import { useNavigate } from 'react-router-dom';
 
 const buildingTypes = [
     { image: houseImg, count: 358, title: 'Дома' , url:'/home' },
-    { image: bathImg, count: 178, title: 'Тини хаус',  url:'/awnings'},
-    { image: garageImg, count: 152, title: 'Бани' , url:'/baths'},
-    { image: shedImg, count: 152, title: 'Гаражи/Навесы', url:'/garages' },
-    { image: commercialImg, count: 205, title: 'Комм. объекты', url:'/communal-objects' },
+    { image: bathImg, count: 178, title: 'Тини хаус',  url:'/tiny-house'},
+    { image: garageImg, count: 152, title: 'Бани' , url:'/bathroom'},
+    { image: shedImg, count: 152, title: 'Гаражи/Навесы', url:'/garaj' },
+    { image: commercialImg, count: 205, title: 'Комм. объекты', url:'/komunal-obyekts' },
 ];
 
 const BuildingTypes = (url ) => {
